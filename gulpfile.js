@@ -24,8 +24,7 @@ const path = {
     html: distPath,
     js: distPath + "assets/js/",
     css: distPath + "assets/css/",
-    images: distPath + "assets/images/",
-    fonts: distPath + "assets/fonts/",
+    images: distPath + "assets/images/"
   },
   src: {
     html: srcPath + "*.html",
@@ -33,8 +32,7 @@ const path = {
     css: srcPath + "assets/scss/*.scss",
     images:
         srcPath +
-        "assets/images//*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-    fonts: srcPath + "assets/fonts//*.{eot,woff,woff2,ttf,svg}",
+        "assets/images//*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}"
   },
   watch: {
     html: srcPath + "**/*.html",
@@ -42,8 +40,7 @@ const path = {
     css: srcPath + "assets/scss/**/*.scss",
     images:
         srcPath +
-        "assets/images/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-    fonts: srcPath + "assets/fonts/*.{eot,woff,woff2,ttf,svg}",
+        "assets/images/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}"
   },
   clean: "./" + distPath,
 };
@@ -131,12 +128,6 @@ function images(cb) {
       .pipe(browserSync.reload({ stream: true }));
 }
 
-function fonts(cb) {
-  return src(path.src.fonts)
-      .pipe(dest(path.build.fonts))
-      .pipe(browserSync.reload({ stream: true }));
-}
-
 function clean(cb) {
   return del(path.clean);
 }
@@ -146,12 +137,11 @@ function watchFiles() {
   watch([path.watch.css], css);
   watch([path.watch.js], js);
   watch([path.watch.images], images);
-  watch([path.watch.fonts], fonts);
 }
 
 const build = series(
     clean,
-    parallel(html, css, js, images, fonts)
+    parallel(html, css, js, images)
 );
 const dev = parallel(build, watchFiles, serve);
 
@@ -167,7 +157,6 @@ exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
-exports.fonts = fonts;
 exports.clean = clean;
 exports.build = build;
 exports.dev = dev;
