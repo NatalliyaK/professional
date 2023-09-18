@@ -1,0 +1,171 @@
+@import '../vars';
+@import '../fonts';
+@import '../mixins';
+
+
+.header {
+  padding: 4rem 0;
+  //width: 100%;
+  //position: sticky;
+  //top: 0;
+  //z-index: 100;
+  //transition: all 2s ease;
+  //padding: 4rem 0;
+  //background: $colorText;
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    transition: all 2s ease;
+    justify-content: space-between;
+  }
+
+  &-svg {
+    height: 2.5rem;
+    width: 3.6rem;
+    margin-left: 1rem;
+  }
+
+  &__text {
+    width: 41rem;
+    margin-right: 10rem;
+  }
+
+  &__text a {
+    color: $colorBg;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__search {
+    position: relative;
+    width: 90rem;
+    margin-right: 6.5rem;
+    height: 4rem;
+    display: flex;
+  }
+
+  &__optic {
+    align-self: center;
+  }
+
+  &-search-svg {
+    position: absolute;
+    top: 10%;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 0.2rem solid $colorBg;
+    width: 100%;
+    margin-right: 6.5rem;
+    padding-left: 4rem;
+    font-size: 1.5rem;
+  }
+
+  &__logo-container {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__menu {
+    margin-left: 5rem;
+  }
+
+  &__menu .menu__list {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+
+  &__menu .menu {
+    width: 90rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: all 2s ease;
+  }
+
+  &__menu .menu__list  .menu__item {
+    color: $colorBg;
+    position: relative;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 0.1rem;
+      width: 0;
+      background-color: $red;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+
+  &__burger {
+    width: 4rem;
+    height: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+  }
+
+  &__burger span {
+    height: 0.4rem;
+    background-color: $colorBg;
+    transition: all 0.3s ease;
+  }
+
+  &__logo {
+    display: flex;
+    gap: 1rem;
+
+    & img {
+      width: 8rem;
+      height: 6.5rem;
+    }
+
+    &-text {
+      font-weight: 800;
+      font-size: 2.4rem;
+      line-height: 3.56rem;
+      text-transform: uppercase;
+      color: $mainColor;
+    }
+  }
+
+  &__tel a {
+    color: $mainColor;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+
+  &__tel,
+  &__menu {
+    align-self: end;
+  }
+
+}
+.out {
+  top: 0;
+}

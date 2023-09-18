@@ -1,0 +1,11 @@
+@import '../vars';
+@import '../fonts';
+
+.menu {
+  width: 21.9rem;
+  &__list {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}

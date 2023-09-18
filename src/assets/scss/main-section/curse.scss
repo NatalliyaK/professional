@@ -1,0 +1,108 @@
+@import '../vars';
+@import '../fonts';
+@import '../mixins';
+
+.curse {
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+
+  &__title {
+    position: relative;
+    padding-right: 8rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 87%;
+      height: 0.2rem;
+      background-color: $border-color;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem 0;
+    gap: 28rem;
+    align-items: flex-end
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  &__swiper {
+    display: flex;
+    max-width: 147rem;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  &__item-inf {
+    padding: 4rem 5rem 3.4rem 5rem;
+    border: 0.2rem solid $mainColor;
+    max-width: 100%;
+    width: 43rem;
+    height: 46rem;
+    max-height: 50rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__button {
+    width: 32.3rem;
+    margin-top: 5.7rem;
+
+    &:hover {
+      background: $red;
+    }
+  }
+
+}
+
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  z-index: 10;
+  background-color: $mainColor;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.left {
+  left: 100%;
+}
+
+.right {
+  right: 100%;
+}
+
+.curse__swiper .btn-prev::after,
+.curse__swiper .btn-next::after {
+  color: #FFFFFF;
+  font-size: 30rem;
+}
+
+

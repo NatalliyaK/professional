@@ -1,0 +1,66 @@
+@import '../vars';
+@import '../fonts';
+@import '../mixins';
+
+.about {
+  display: flex;
+
+ &__information {
+   padding: 8rem 11rem 6.6rem 6.2rem;
+   background-image: linear-gradient(#932070 100%, #C51459 100%, #DF273E 100%, #EA580D 100%);
+   //background-image: url('../../images/Layer 1.png');
+   //background-position: right bottom;
+   //background-repeat: no-repeat;
+
+ }
+
+  &__form {
+    padding: 8rem 4.9rem 6.6rem 6.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__cookie-banner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: 46.4rem;
+  }
+
+  &__subtitle {
+    color: $mainColor;
+  }
+
+  &__form-control {
+    width: 58rem;
+    height: 3.9rem;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 0.2rem solid $border-color;
+    outline: none;
+  }
+
+  &__button {
+    align-self: center;
+    margin-top: 3rem;
+  }
+
+  &__information-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem 0 10rem 4rem;
+  }
+
+  &__information-item {
+    color: $colorText;
+    list-style: disc;
+  }
+
+  &__button-information:hover {
+    background: $red;
+    color: $colorText;
+  }
+
+}

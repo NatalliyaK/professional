@@ -1,0 +1,18 @@
+$colorBg: #3E2235;
+$colorText: #FFFFFF;
+$mainColor: #C51459;
+$red: #DF273E;
+$border-color: #3E2235;
+
+@mixin color-opacity {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+$cos_bp: 1440px;
+$xl-bp: 1024px;
+$sm-bp: 500px;
+
+
+
+

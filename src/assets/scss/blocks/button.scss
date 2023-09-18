@@ -1,0 +1,34 @@
+@import '../vars';
+@import '../fonts';
+@import '../mixins';
+
+.button {
+  width: 36.3rem;
+  height: 6rem;
+  background: $colorText;
+  padding: 1.5rem 6.3rem;
+  color: $mainColor;
+  border: none;
+
+  &-bg {
+    background: $mainColor;
+    color: $colorText;
+  }
+}
+
+.about__button:hover {
+  background: $red;
+}
+
+.button-small {
+  width: 19rem;
+  height: 4.1rem;
+  padding: 0.45rem 4.4rem;
+  background: $mainColor;
+  color: $colorText;
+  border: none;
+
+  &:hover {
+    background: $red;
+  }
+}

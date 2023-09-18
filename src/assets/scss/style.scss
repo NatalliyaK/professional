@@ -1,0 +1,140 @@
+@import "fonts";
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+@import "vars";
+@import "mixins";
+@import "vendor/reset";
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+  @include breakpoint($cos-bp) {
+    font-size: calc(100vw / 1440 * 10);
+  }
+
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 768 * 10);
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+a, a:link, a:visited  {
+  text-decoration: none;
+}
+
+a:hover  {
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+svg {
+  transition: all 0.1s linear;
+}
+
+
+/* Blocks */
+.wrapper {
+  width: 172rem;
+  margin: 0 auto;
+}
+
+.title {
+  color: $colorBg;
+  font-weight: 800;
+  font-size: 4.6rem;
+  line-height: 6.83rem;
+}
+
+.text {
+  color: $colorBg;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.56rem;
+
+  &__card {
+    color: $colorBg;
+    font-size: 2rem;
+    line-height: 2.9rem;
+  }
+
+  &__button {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.9rem;
+
+    &-header {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.37rem;
+  }
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.--color-link {
+  color: $mainColor;
+}
+
+.agree {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 0.1rem solid $border-color;
+
+  &-link {
+    text-decoration: underline;
+    color: $mainColor;
+  }
+}
+
+.title-slider {
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  color: $colorBg;
+}
+
+.--color-text {
+  color: $colorText;
+}
+
+
+
+
+@import "importsBlocks";
