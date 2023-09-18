@@ -17,7 +17,7 @@
         </div>
         <div class="about__form">
             <h2 class="about__subtitle title">Оставляйте заявку и мы ответим на ваши вопросы</h2>
-            <form>
+            <form class="form">
                 <div class="about__form-row">
                     <div class="about__form-element">
                         <input type="text" required id="form-control-name" class="about__form-control" placeholder="ФИО">
@@ -32,7 +32,7 @@
                 <p class="text__subtitle">Согласен на обработку персональных данных, получение рассылок, а также с <a class="agree-link --color-link">Политикой конфиденциальности</a>
                 </p>
             </div>
-            <button class="about__button button button-bg text__button">Оставить заявку</button>
+            <button class="about__button button button-bg text__button ">Оставить заявку</button>
         </div>
     </section>
     <section class="curse wrapper">
@@ -222,17 +222,15 @@
                     </div>
                 </div>
 
-                <div class="btn-prev left"></div>
-                <div class="btn-next right"></div>
+                <div class="swiper-button-prev btn-prev left"></div>
+                <div class="swiper-button-next btn-next right"></div>
 
             </div>
         </div>
     </section>
     <section class="project wrapper">
         <h2 class="project__title title">Проекты</h2>
-        <div>
-            <button class="project__button button-small text__button text__button-header">Все проекты</button>
-        </div>
+        <button class="project__button button-small text__button text__button-header">Все проекты</button>
         <div class="project__slider">
             <div class="project__swiper">
                 <div class="swiper-wrapper">
@@ -242,53 +240,124 @@
                                 <h2 class="title-slider --color-text">Участие в мероприятиях в рамках проекта
                                     «Школа путешественников Фёдора Конюхова»</h2>
                                 <div class="swiper-slide-inf">
-                                    <h4 class="text__card --color-text">Период выполнения: </h4> <p>ноябрь 2014 – сентябрь 2016г</p>
-                                    <h4 class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</h4><p>340 000</p>
+                                    <h4 class="text__card --color-text">Период выполнения:</h4>  <span class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</span>
+                                    <h4 class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</h4> <span class="text__card --color-text">340 000</span>
                                     <h4 class="text__card --color-text">Источники финансирования:</h4>
-                                    <p>Собственные/ Привлеченные средства</p>
+                                    <span class="text__card --color-text">Собственные/ Привлеченные средства</span>
                                 </div>
                                 <button class="about__button-information button text__button">Подробнее</button>
                             </div>
-                            <div>
-                                <img src="assets/images/project-slide.jpg" class="project__img" alt="slide">
+                            <div class="project__img">
+                                <img src="assets/images/project-slide.jpg" alt="slide">
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-slide-content">
-                            <div class="swiper-slide-content">
-                                <div>
-                                    <h2 class="title-slider --color-text">Участие в мероприятиях в рамках проекта
-                                        «Школа путешественников Фёдора Конюхова»</h2>
-                                    <div class="swiper-slide-inf">
-                                        <h4 class="text__card --color-text">Период выполнения: </h4> <p>ноябрь 2014 – сентябрь 2016г</p>
-                                        <h4 class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</h4><p>340 000</p>
-                                        <h4 class="text__card --color-text">Источники финансирования:</h4>
-                                        <p>Собственные/ Привлеченные средства</p>
-                                    </div>
-                                    <button class="button">Подробнее</button>
+                            <div class="swiper-slide-text">
+                                <h2 class="title-slider --color-text">Участие в мероприятиях в рамках проекта
+                                    «Школа путешественников Фёдора Конюхова»</h2>
+                                <div class="swiper-slide-inf">
+                                    <h4 class="text__card --color-text">Период выполнения: </h4> <span class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</span>
+                                    <h4 class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</h4><span class="text__card --color-text">340 000</span>
+                                    <h4 class="text__card --color-text">Источники финансирования:</h4>
+                                    <span class="text__card --color-text">Собственные/ Привлеченные средства</span>
                                 </div>
-                                <div>
-                                    <img src="assets/images/project-slide2.jpg"  class="project__img" alt="slide">
-                                </div>
+                                <button class="about__button-information button text__button">Подробнее</button>
                             </div>
+                            <div>
+                                <img src="assets/images/project-slide2.jpg"  class="project__img" alt="slide">
+                            </div>
+                        </div>
                     </div>
-
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-content">
+                            <div class="swiper-slide-text">
+                                <h2 class="title-slider --color-text">Участие в мероприятиях в рамках проекта
+                                    «Школа путешественников Фёдора Конюхова»</h2>
+                                <div class="swiper-slide-inf">
+                                    <h4 class="text__card --color-text">Период выполнения: </h4> <span class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</span>
+                                    <h4 class="text__card --color-text">ноябрь 2014 – сентябрь 2016г</h4><span class="text__card --color-text">340 000</span>
+                                    <h4 class="text__card --color-text">Источники финансирования:</h4>
+                                    <span class="text__card --color-text">Собственные/ Привлеченные средства</span>
+                                </div>
+                                <button class="about__button-information button text__button">Подробнее</button>
+                            </div>
+                            <div>
+                                <img src="assets/images/project-slide2.jpg"  class="project__img" alt="slide">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="project-swiper-pagination"></div>
-            <div class="project-btn-prev left_button"></div>
-            <div class="project-btn-next right_button"></div>
+            <div class="swiper-button-prev project-btn-prev left_button"></div>
+            <div class="swiper-button-next project-btn-next right_button"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
-<!--    <section class="grants wrapper">-->
-<!--        <h2 class="curse__title title">Президентские гранты</h2>-->
-<!--        <div class="grants__container">-->
-<!--            <div></div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!--    <section class="news wrapper">-->
-<!--        <h2 class="curse__title title">Новости</h2>-->
-<!--    </section>-->
+    <section class="grants wrapper">
+        <h2 class="grants__title title">Президентские гранты</h2>
+        <div class="grants__container">
+            <div class="grants__item">
+                <div class="grants__number">1</div>
+                <div class="grants__content">
+                    <div class="grants__information">
+                        <h2 class="title-slider">Медиапроект «Ойкумена Фёдора Конюхова»</h2>
+                        <p class="grants__text">Это развитие проекта-стартапа, начатого в 2015-16гг. при поддержке РГО. Предполагается отснять, смонтировать и показать в эфире 6 новых выпусков одноимённой телепрограммы, а также выпустить фотоальбом «Ойкумена Пилигрима» с вложенным DVD-сборником этих программ.</p>
+                    </div>
+                    <button class="grants__button text__button">Подробнее</button>
+                </div>
+            </div>
+            <div class="grants__item">
+                <div class="grants__number">2</div>
+                <div class="grants__content">
+                    <div class="grants__information">
+                        <h2 class="title-slider">Разработка пилотного проекта Учебно-исследовательского центра Фёдора Конюхова с созданием документального фильма «Мобильная лаборатория»</h2>
+                        <p class="grants__text">Первоочередными задачами этого проекта являются демонстрация через средства масс-медиа наработанного задела и возможностей мобильной лаборатории Ф.Конюхова, а также разработка пилотного проекта Учебно-Исследовательского
+                            Центра Фёдора Конюхова.</p>
+                    </div>
+                    <button class="grants__button text__button">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news wrapper">
+        <h2 class="news__title title">Новости</h2>
+        <div class="news__container">
+            <ul class="news__list">
+                <li class="news__item">
+                    <div class="news__item-text">
+                        <span class="news__item-card">04.05.21</span>
+                        <p class="text__card">Президент России подписал Закон о просветительской деятельности</p>
+                    </div>
+                    <button class="news__button button-small text__button">Читать</button>
+                </li>
+                <li class="news__item">
+                    <div class="news__item-text">
+                        <span class="news__item-card">29.04.21</span>
+                        <p class="text__card">Постановление Правительства РФ от 29.04.2021 N 681<br>
+                            О предоставлении субсидий на повышение квалификации и переподготовки работников ОПК</p>
+                    </div>
+                    <button class="news__button button-small text__button">Читать</button>
+                </li>
+                <li class="news__item">
+                    <div class="news__item-text">
+                        <span class="news__item-card">06.04.21</span>
+                        <p class="text__card">Проект актуализированного профессионального стандарта Педагог дополнительного<br>
+                            профессионального образования для детей и взрослых</p>
+                    </div>
+                    <button class="news__button button-small text__button">Читать</button>
+                </li>
+                <li class="news__item">
+                    <div class="news__item-text">
+                        <span class="news__item-card">26.03.21 </span>
+                        <p class="text__card">Благодарственное письмо ЦЗН Советского района Саратовской области в области сотрудничества с <br>
+                            ИНО «Профессионал» по обучению граждан в рамках Национальных проектов РФ</p>
+                    </div>
+                    <button class="news__button button-small text__button">Читать</button>
+                </li>
+            </ul>
+        </div>
+        <button class="news__button-all button-small text__button">Все новости</button>
+    </section>
 </div>

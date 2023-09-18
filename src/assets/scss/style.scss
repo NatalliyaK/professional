@@ -1,9 +1,5 @@
 @import "fonts";
 
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
-
 @import "vars";
 @import "mixins";
 @import "vendor/reset";
@@ -23,8 +19,6 @@ html {
     font-size: calc(100vw / 375 * 10);
   }
 }
-
-
 
 *,
 *::before,
@@ -133,7 +127,6 @@ svg {
 .--color-text {
   color: $colorText;
 }
-
 
 
 

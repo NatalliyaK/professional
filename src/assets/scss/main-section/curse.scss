@@ -88,21 +88,20 @@
   background-color: $mainColor;
   border-radius: 50%;
   cursor: pointer;
-
 }
 
 .left {
-  left: 100%;
+  left: -2.5rem;
 }
 
 .right {
-  right: 100%;
+  right: -2.5rem;
 }
 
-.curse__swiper .btn-prev::after,
-.curse__swiper .btn-next::after {
+.swiper-button-prev:after,
+.swiper-button-next:after {
   color: #FFFFFF;
-  font-size: 30rem;
+  font-size: 1rem;
 }
 
 

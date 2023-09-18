@@ -165,7 +165,92 @@
     align-self: end;
   }
 
+  &__mob {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(62, 34, 53, 0.7);
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+    margin-top: -19rem;
+
+    &-menu {
+      width: 53.6rem;
+      background: $mainColor;
+      height: 100%;
+      overflow-y: scroll;
+
+    }
+
+    &-item a {
+      color: $colorText;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    &-list {
+      padding: 8rem 11.5rem 8rem 10rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &-close {
+      position: relative;
+      margin-bottom: 3.2rem;
+    }
+  }
+
 }
+
+.show {
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
 .out {
   top: 0;
 }
+
+.close {
+  right: 3.2rem;
+  top: 3.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  opacity: 0.7;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 1.5rem;
+  content: ' ';
+  height: 3.3rem;
+  width: 0.4rem;
+  background-color: $colorText;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.header__mob-menu::-webkit-scrollbar-track {
+  background: $mainColor;
+  border-radius: 2rem;
+}
+
+.header__mob-menu::-webkit-scrollbar-thumb {
+  background: $red;
+  border-radius: 1rem;
+}
+

@@ -1,3 +1,56 @@
 @import '../vars';
 @import '../fonts';
 @import '../mixins';
+
+.news {
+  padding-bottom: 14rem;
+  &__title {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0.7rem;
+      width: 81%;
+      height: 0.2rem;
+      background-color: $border-color;
+    }
+  }
+
+  &__container {
+    padding-top: 8rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0 2rem;
+    border-bottom: 0.2rem solid $border-color;
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &-text {
+      display: flex;
+      gap: 2rem;
+      align-self: center;
+    }
+
+    &-card {
+      color: $colorBg;
+      font-weight: 800;
+      font-size: 2rem;
+      line-height: 2.9rem;
+    }
+  }
+
+  &__button {
+    padding: 0.45rem 5.75rem;
+    &-all {
+      padding: 0.45rem 3.4rem;
+      margin-top: 6.1rem;
+    }
+  }
+}
+

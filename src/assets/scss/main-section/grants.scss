@@ -1,3 +1,70 @@
 @import '../vars';
 @import '../fonts';
 @import '../mixins';
+
+
+.grants {
+  padding-bottom: 14rem;
+
+  &__title {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 38%;
+      width: 63%;
+      height: 0.2rem;
+      background-color: $border-color;
+    }
+  }
+
+  &__container {
+    margin-top: 8rem;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    padding: 8rem 7.6rem 4.2rem 8rem;
+    border: 0.2rem solid $mainColor;
+    gap: 4rem;
+    height: 62.8rem;
+  }
+
+  &__number {
+    font-weight: 800;
+    font-size: 20rem;
+    line-height: 14rem;
+    color: $border-color;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    color: $border-color;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.9rem;
+    margin-top: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__button {
+    border: none;
+    width: 33.6rem;
+    height: 6rem;
+    padding: 1.1rem 10.5rem 1rem 10.5rem;
+    background: $mainColor;
+    color: $colorText;
+  }
+}

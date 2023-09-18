@@ -10,6 +10,8 @@
 
 @import './blocks/menu.scss';
 
+@import './blocks/pop-up.scss';
+
 @import './blocks/button';
 
 @import './main-section/about.scss';
@@ -18,7 +20,7 @@
 
 @import './main-section/project.scss';
 
-@import './main-section/news.scss';
+@import 'main-section/news';
 
 @import './main-section/grants.scss';
 

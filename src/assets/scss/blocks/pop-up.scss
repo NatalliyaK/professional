@@ -1,0 +1,18 @@
+@import '../vars';
+@import '../fonts';
+@import '../mixins';
+
+.pop-up {
+  background-color: rgba(62, 34, 53, 0.7);
+
+  &__information {
+    padding: 7rem 12.6rem 6.4rem 5rem;
+    background: $mainColor;
+  }
+
+  &__text {
+    font-weight: 800;
+    font-size: 4.6rem;
+    line-height: 6.8rem;
+  }
+}
