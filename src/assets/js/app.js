@@ -1,6 +1,58 @@
+
+
+
 window.addEventListener('DOMContentLoaded',() => {
   const header = document.querySelector('.header');
   const formAbout = document.querySelector('.form');
+
+  function handleForm (formAbout) {
+    formAbout.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      let controls = this.querySelectorAll('.form-control');
+      let isValid = true;
+      controls.forEach(control => {
+        control.classList.remove('invalid-control');
+        if (control.classList.contains('required') && !control.value) {
+          control.classList.add('invalid-control');
+          isValid = false;
+        }
+      });
+
+      if (isValid) {
+        showSuccessModal();
+        controls.forEach(control => {
+          control.value = '';
+          control.checked = false;
+        });
+      }
+    })
+  }
+
+  function showSuccessModal () {
+    const popUp = document.querySelector('.pop-up');
+    const close = document.querySelector('.pop-up__close');
+    const popUpButton = document.querySelector('.pop-up__button');
+    function openModal() {
+      popUp.style.display = 'block';
+    }
+
+    function closeModal() {
+      popUp.style.display = 'none';
+    }
+
+    close.addEventListener('click', function () {
+      closeModal();
+    })
+
+    popUpButton.addEventListener('submit',function () {
+      closeModal();
+    })
+
+    openModal();
+
+  }
+
 
   if(header) {
     const headerTop = document.querySelector('.header__top');
@@ -32,8 +84,9 @@ window.addEventListener('DOMContentLoaded',() => {
   }
 
   if(formAbout) {
-
+    handleForm(formAbout)
   }
+
 })
 
 

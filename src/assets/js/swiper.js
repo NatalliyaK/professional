@@ -13,8 +13,6 @@ const projectSlider = new Swiper('.project__swiper', {
     slidesPerView: 1,
     dynamicBullets: true,
 
-
-
     pagination: {
         el: '.swiper-pagination',
         clickable: true

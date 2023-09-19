@@ -49,7 +49,6 @@ svg {
   transition: all 0.1s linear;
 }
 
-
 /* Blocks */
 .wrapper {
   width: 172rem;
@@ -101,6 +100,10 @@ svg {
   color: $mainColor;
 }
 
+.--color-black {
+
+}
+
 .agree {
   width: 2.8rem;
   height: 2.8rem;
@@ -123,6 +126,30 @@ svg {
   color: $colorText;
 }
 
+
+label input {
+  display: none;
+}
+
+label span {
+  height: 2rem;
+  width: 2rem;
+  border: 0.1rem solid gray;
+  display: inline-block;
+  position: relative;
+  background-color: $colorText;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+}
+
+[type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
+  content: '\2714';
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  font-size: 2.3rem;
+  color: $border-color;
+}
 
 
 @import "importsBlocks";

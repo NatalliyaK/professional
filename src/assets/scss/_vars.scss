@@ -3,9 +3,14 @@ $colorText: #FFFFFF;
 $mainColor: #C51459;
 $red: #DF273E;
 $border-color: #3E2235;
+$black: #000000;
 
 @mixin color-opacity {
   color: rgba(255, 255, 255, 0.4);
+}
+
+@mixin bg-color {
+  background: linear-gradient(45deg, rgba(147,32,112,1) 0%, rgba(197,20,89,1) 35%, rgba(223,39,62,1) 61%, rgba(234,88,13,1) 100%);
 }
 
 

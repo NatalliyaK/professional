@@ -5,13 +5,13 @@
 
 .header {
   padding: 4rem 0;
-  //width: 100%;
-  //position: sticky;
-  //top: 0;
-  //z-index: 100;
-  //transition: all 2s ease;
-  //padding: 4rem 0;
-  //background: $colorText;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 2s ease;
+  padding: 4rem 0;
+  background: $colorText;
   &__top {
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@
     position: fixed;
     left: -100%;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 5%);
     background-color: rgba(62, 34, 53, 0.7);
     transition: all 0.5s ease-in-out;
     z-index: 10;
@@ -244,13 +244,15 @@
   transform: rotate(-45deg);
 }
 
+.header__mob-menu::-webkit-scrollbar {
+  width: 1rem;
+}
+
 .header__mob-menu::-webkit-scrollbar-track {
-  background: $mainColor;
-  border-radius: 2rem;
+  background: rgba(62, 34, 53, 0.75);
 }
 
 .header__mob-menu::-webkit-scrollbar-thumb {
   background: $red;
   border-radius: 1rem;
 }
-

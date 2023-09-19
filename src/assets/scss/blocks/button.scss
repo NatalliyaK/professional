@@ -9,6 +9,7 @@
   padding: 1.5rem 6.3rem;
   color: $mainColor;
   border: none;
+  transition: background-color 0.5s ease;
 
   &-bg {
     background: $mainColor;
@@ -27,6 +28,7 @@
   background: $mainColor;
   color: $colorText;
   border: none;
+  transition: background-color 0.5s ease;
 
   &:hover {
     background: $red;

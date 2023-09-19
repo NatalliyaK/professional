@@ -1,10 +1,10 @@
 @import '../vars';
-
 @import '../mixins';
 
 .footer {
   background: $colorBg;
   padding: 10.5rem 0 8.3rem;
+  margin-top: 16rem;
 
   &__container {
     display: flex;
@@ -32,6 +32,9 @@
   &__svg {
     width: 4rem;
     height: 4rem;
+    &:hover {
+      stroke: $mainColor;
+    }
   }
 
   &__social {
@@ -77,6 +80,10 @@
   &__logo {
     width: 8rem;
     height: 6.7rem;
+
+    &:hover {
+      stroke: $mainColor;
+    }
   }
 
 }

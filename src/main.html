@@ -4,6 +4,7 @@
 <!-- -&#45;&#45;-->
 
 <div class="main">
+    {{> pop-up}}
     <section class="about wrapper">
         <div class="about__information">
             <h1 class="title --color-text">Институт непрерывного образования «Профессионал» это:</h1>
@@ -14,25 +15,35 @@
                 <li class="about__information-item text__card">Медицинское обслуживание</li>
             </ul>
             <button class="about__button-information button text__button">Узнать про поступление</button>
+            <div class="about__information-img">
+                <svg class="about__img">
+                    <use href="#logo-about"></use>
+                </svg>
+            </div>
         </div>
         <div class="about__form">
             <h2 class="about__subtitle title">Оставляйте заявку и мы ответим на ваши вопросы</h2>
             <form class="form">
                 <div class="about__form-row">
                     <div class="about__form-element">
-                        <input type="text" required id="form-control-name" class="about__form-control" placeholder="ФИО">
+                        <input type="text" required id="form-control-name" class="form-control about__form-control" placeholder="ФИО">
                     </div>
                     <div>
-                        <input type="number" required id="form-control-tel" class="about__form-control" placeholder="Телефон">
+                        <input type="number" required id="form-control-tel" class="form-control about__form-control" placeholder="Телефон">
                     </div>
                 </div>
+                <div class="about__cookie-banner">
+                    <label>
+                        <input type="checkbox" required id="accept-cookies-checkbox form-control" class="agree">
+                        <span></span>
+                    </label>
+                        <p class="text__subtitle">Согласен на обработку персональных данных, получение рассылок, а также с <a class="agree-link --color-link">Политикой конфиденциальности</a>
+                        </p>
+                </div>
+                <div class="about__button-container">
+                    <button type="submit" class="about__button button button-bg text__button">Оставить заявку</button>
+                </div>
             </form>
-            <div class="about__cookie-banner">
-                <input type="checkbox" id="accept-cookies-checkbox" class="agree">
-                <p class="text__subtitle">Согласен на обработку персональных данных, получение рассылок, а также с <a class="agree-link --color-link">Политикой конфиденциальности</a>
-                </p>
-            </div>
-            <button class="about__button button button-bg text__button ">Оставить заявку</button>
         </div>
     </section>
     <section class="curse wrapper">
@@ -221,10 +232,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="swiper-button-prev btn-prev left"></div>
                 <div class="swiper-button-next btn-next right"></div>
-
             </div>
         </div>
     </section>
@@ -266,7 +275,7 @@
                                 <button class="about__button-information button text__button">Подробнее</button>
                             </div>
                             <div class="project__img">
-                                <img src="assets/images/project-slide2.jpg"  class="project__img" alt="slide">
+                                <img src="assets/images/project-slide2.jpg" alt="slide">
                             </div>
                         </div>
                     </div>
@@ -284,7 +293,7 @@
                                 <button class="about__button-information button text__button">Подробнее</button>
                             </div>
                             <div class="project__img">
-                                <img src="assets/images/project-slide2.jpg"  class="project__img" alt="slide">
+                                <img src="assets/images/project-slide2.jpg" alt="slide">
                             </div>
                         </div>
                     </div>
@@ -292,7 +301,7 @@
             </div>
             <div class="swiper-button-prev project-btn-prev left_button"></div>
             <div class="swiper-button-next project-btn-next right_button"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination project-pagination"></div>
         </div>
     </section>
     <section class="grants wrapper">

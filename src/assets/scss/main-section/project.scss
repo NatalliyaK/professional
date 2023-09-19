@@ -1,5 +1,4 @@
 @import '../vars';
-
 @import '../mixins';
 
 .project {
@@ -7,15 +6,47 @@
   &__title {
     position: relative;
     padding-right: 8rem;
+    &--bottom {
+      padding-bottom: 8rem;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 23%;
+        right: 0.7rem;
+        width: 81%;
+        height: 0.2rem;
+        background-color: $border-color;
+      }
+    }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0.7rem;
-      width: 81%;
-      height: 0.2rem;
-      background-color: $border-color;
+  }
+
+  &__inf {
+    background: $mainColor;
+    padding: 4rem 4rem 3.2rem 4rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+      & li {
+        display: flex;
+        gap: 1rem;
+      }
+
+    margin-bottom: 6rem;
+  }
+
+  &__content {
+    display: flex;
+    gap: 6.4rem;
+    margin-top: 2rem;
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 4rem;
+      padding-right: 6.4rem;
     }
   }
 
@@ -31,6 +62,11 @@
     & img {
       height: 100%;
     }
+  }
+
+  &-pagination {
+    position: absolute;
+    margin-bottom: -5rem;
   }
 
   &__slider {
@@ -67,30 +103,11 @@
   display: flex;
 }
 
-.left {
-  left: -2.5rem;
-}
-
-.right {
-  right: -2.5rem;
-}
-
 .swiper-button-prev:after,
 .swiper-button-next:after {
   color: #FFFFFF;
   font-size: 1rem;
 }
-
-//.project-swiper-pagination {
-//  position: absolute;
-//  width: 2rem;
-//  height: 2rem;
-//  border-radius: 50%;
-//  background: $mainColor;
-//  bottom: 0;
-//  z-index: 10;
-//  cursor: pointer;
-//}
 
 .swiper-slide-text {
   padding: 4rem 3rem 3.3rem 6rem;
@@ -101,10 +118,6 @@
   background: $mainColor;
   max-width: 70.5rem;
 }
-
-//.swiper-slide-inf h4 {
-//  display: inline-block;
-//}
 
 .swiper-pagination-bullet {
   background-color: transparent;
@@ -118,4 +131,3 @@
 .swiper-pagination-bullet-active {
   background: $mainColor;
 }
-

@@ -1,5 +1,4 @@
 @import '../vars';
-
 @import '../mixins';
 
 .about {
@@ -7,21 +6,33 @@
 
  &__information {
    padding: 8rem 11rem 6.6rem 6.2rem;
-   background-image: linear-gradient(#932070 100%, #C51459 100%, #DF273E 100%, #EA580D 100%);
-   //background-image: url('../../images/Layer 1.png');
-   //background-position: right bottom;
-   //background-repeat: no-repeat;
+   @include bg-color;
+   position: relative;
 
+   &-img {
+     position: absolute;
+     bottom: 4rem;
+     right: 3rem;
+     opacity: 0.3;
+   }
  }
+
+  &__img {
+    width: 44.3rem;
+    height: 33.7rem;
+  }
+
 
   &__form {
     padding: 8rem 4.9rem 6.6rem 6.7rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    justify-content: space-around;
   }
 
   &__cookie-banner {
+    margin-top: 4rem;
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -41,9 +52,11 @@
     outline: none;
   }
 
-  &__button {
+  &__button-container {
+    display: flex;
+    justify-content: center;
     align-self: center;
-    margin-top: 3rem;
+    margin-top: 7rem;
   }
 
   &__information-list {
