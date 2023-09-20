@@ -3,14 +3,13 @@
 
 .footer {
   background: $colorBg;
-  padding: 10.5rem 0 8.3rem;
-  margin-top: 16rem;
+  padding: 5.5rem 0 8.3rem;
 
   &__container {
     display: flex;
     justify-content: space-between;
     gap: 23.4rem;
-    padding-bottom: 12rem;
+    padding-bottom: 5rem;
     border-bottom: 0.2rem solid rgba(255, 255, 255, 0.4);
   }
 

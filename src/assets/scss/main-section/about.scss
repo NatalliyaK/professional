@@ -3,11 +3,13 @@
 
 .about {
   display: flex;
+  max-height: 66.2rem;
 
  &__information {
    padding: 8rem 11rem 6.6rem 6.2rem;
    @include bg-color;
    position: relative;
+   max-width: 99rem;
 
    &-img {
      position: absolute;
@@ -22,13 +24,17 @@
     height: 33.7rem;
   }
 
-
   &__form {
+    border: 0.2rem solid $mainColor;
     padding: 8rem 4.9rem 6.6rem 6.7rem;
+    max-width: 72.5rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     justify-content: space-around;
+    &-element {
+      margin-bottom: 2rem;
+    }
   }
 
   &__cookie-banner {
@@ -75,5 +81,4 @@
     background: $red;
     color: $colorText;
   }
-
 }

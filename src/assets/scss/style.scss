@@ -58,14 +58,14 @@ svg {
 .title {
   color: $colorBg;
   font-weight: 800;
-  font-size: 4.6rem;
+  font-size: 3.9rem;
   line-height: 6.83rem;
 }
 
 .text {
   color: $colorBg;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   line-height: 3.56rem;
 
   &__card {
@@ -112,12 +112,13 @@ svg {
   &-link {
     text-decoration: underline;
     color: $mainColor;
+    cursor: pointer;
   }
 }
 
 .title-slider {
   font-weight: 800;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   line-height: 3.8rem;
   color: $colorBg;
 }
@@ -132,22 +133,23 @@ label input {
 }
 
 label span {
-  height: 2rem;
-  width: 2rem;
+  height: 2.8rem;
+  width: 2.8rem;
   border: 0.1rem solid gray;
   display: inline-block;
   position: relative;
   background-color: $colorText;
   border-radius: 0.2rem;
   padding: 0.3rem;
+  cursor: pointer;
 }
 
 [type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
   content: '\2714';
   position: absolute;
-  top: -0.5rem;
-  left: 0;
-  font-size: 2.3rem;
+  top: -3%;
+  left: 2px;
+  font-size: 3rem;
   color: $border-color;
 }
 

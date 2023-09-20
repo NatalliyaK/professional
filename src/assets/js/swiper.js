@@ -1,7 +1,7 @@
 const curseSlider = new Swiper('.curse__swiper', {
     loop: true,
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 80,
     navigation: {
         nextEl: '.btn-prev',
         prevEl: '.btn-next',
