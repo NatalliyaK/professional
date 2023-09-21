@@ -1,0 +1,25 @@
+@import '../vars';
+@import '../mixins';
+
+.presidential-grants {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12%;
+    right: 0.7rem;
+    width: 67%;
+    height: 0.2rem;
+    background-color: $border-color;
+  }
+
+  &__title {
+    margin: 8rem 0 8rem 0;
+  }
+
+  &__text {
+    max-width: 116.2rem;
+    margin: 4rem 0 6rem 0;
+  }
+}

@@ -82,3 +82,108 @@
     color: $colorText;
   }
 }
+
+.about-us {
+  margin-bottom: 14rem;
+    &__title {
+      position: relative;
+      margin-bottom: 8rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 11%;
+        width: 89%;
+        height: 0.2rem;
+        background-color: $border-color;
+      }
+    }
+
+  &__information {
+    margin-bottom: 14rem;
+    max-width: 115.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__img-container {
+    position: relative;
+    max-width: 172rem;
+    max-height: 73.3rem;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto 14rem;
+  }
+
+  &__inf {
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 17.6rem;
+  }
+
+  &__swiper {
+    max-width: 110.4rem;
+    overflow: hidden;
+    max-height: 66rem;
+  }
+
+  &-pagination {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+
+  &-btn-prev,
+  &-btn-next {
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: $mainColor;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 50%;
+    &:hover {
+      background: $red;
+    }
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-prev:after {
+  color: $colorText;
+  font-size: 1rem;
+}
+
+.btn-left {
+  left: 15%;
+}
+
+.btn-right {
+  right: 13%;
+}
+
+.swiper-pagination span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border-color: $colorText;
+  background: $colorText;
+  &.swiper-pagination-bullet-active {
+    background: $mainColor;
+  }
+}
+

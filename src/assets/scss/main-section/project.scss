@@ -97,6 +97,9 @@
   z-index: 10;
   cursor: pointer;
   border-radius: 50%;
+  &:hover {
+    background: $red;
+  }
 }
 
 .swiper-slide-content {

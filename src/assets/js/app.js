@@ -1,6 +1,3 @@
-
-
-
 window.addEventListener('DOMContentLoaded',() => {
   const header = document.querySelector('.header');
   const formAbout = document.querySelector('.form');
@@ -66,7 +63,7 @@ window.addEventListener('DOMContentLoaded',() => {
       let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
       if(scrolled > windowHeight / 2){
-        headerNav.style.opacity = '0';
+        headerNav.style.opacity = '0.6';
       } else {
         headerNav.style.opacity = '1';
       }

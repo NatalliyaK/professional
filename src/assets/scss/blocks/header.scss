@@ -3,6 +3,11 @@
 
 .header {
   padding: 4rem 0;
+  height: 20rem;
+  top: -9rem;
+  background: $colorText;
+  z-index: 20;
+  position: sticky;
   &__top {
     display: flex;
     align-items: center;
@@ -15,6 +20,9 @@
     height: 2.5rem;
     width: 3.6rem;
     margin-left: 1rem;
+    &:hover {
+      stroke: $colorBg;
+    }
   }
 
   &__text {
@@ -83,6 +91,9 @@
     cursor: pointer;
     justify-content: space-between;
     transition: all 2s ease;
+    position: sticky;
+    top: 0;
+    height: 7rem;
   }
 
   &__menu .menu__list  .menu__item {
@@ -128,6 +139,7 @@
   &__logo {
     display: flex;
     gap: 1rem;
+    max-width: 28rem;
 
     & img {
       width: 8rem;
@@ -140,6 +152,9 @@
       line-height: 3.56rem;
       text-transform: uppercase;
       color: $mainColor;
+      &:hover {
+        color: $red;
+      }
     }
   }
 
@@ -148,6 +163,10 @@
     font-weight: 800;
     font-size: 2.4rem;
     line-height: 3.5rem;
+    cursor: pointer;
+    &:hover {
+      color: $red;
+    }
   }
 
   &__tel,
@@ -211,6 +230,7 @@
   width: 3.5rem;
   height: 3.5rem;
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .close:hover {
