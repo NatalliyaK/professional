@@ -25,8 +25,16 @@ html {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-a, a:link, a:visited  {
+a, a:link {
   text-decoration: none;
+}
+
+//a:link, a:visited {
+//  color: $colorBg;
+//}
+
+a:hover, a:active {
+  color: $mainColor;
 }
 
 a:hover  {
@@ -89,6 +97,13 @@ svg {
     font-size: 1.6rem;
     line-height: 2.37rem;
   }
+
+  &__additionally {
+    color: $colorBg;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 3.8rem;
+  }
 }
 
 :active, :hover, :focus {
@@ -127,6 +142,9 @@ svg {
   color: $colorText;
 }
 
+.--color-dark {
+  color: $colorBg;
+}
 
 label input {
   display: none;

@@ -7,19 +7,85 @@
   &::before {
     content: "";
     position: absolute;
-    top: 12%;
+    top: 4rem;
     right: 0.7rem;
     width: 67%;
     height: 0.2rem;
     background-color: $border-color;
   }
 
+  &__wrapper {
+    max-width: 116.2rem;
+    margin-top: 4rem;
+  }
+
   &__title {
-    margin: 8rem 0 8rem 0;
+    margin: 4rem 0 8rem 0;
   }
 
   &__text {
-    max-width: 116.2rem;
-    margin: 4rem 0 6rem 0;
+    margin: 1rem 0 6rem 0;
   }
+
+  & .title-slider {
+    display: inline-block;
+    padding: 0 1rem 3rem 0;
+    & a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    margin-bottom: 14rem;
+  }
+
+  &__item p,
+  &__item h3 {
+   display: inline;
+  }
+
+  &__item a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &__video {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    margin: 5rem 0 14rem 0;
+    & div {
+      height: 96.5rem;
+    }
+  }
+
+  &__subtitle {
+    color: $colorBg;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    text-decoration: underline;
+    display: inline-block;
+  }
+
+  &__information-list {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+  }
+
+  &__list {
+    margin-left: 4rem;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }

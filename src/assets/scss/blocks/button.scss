@@ -10,6 +10,10 @@
   color: $mainColor;
   border: none;
   transition: background-color 0.5s ease;
+  &:hover {
+    @include bg-color;
+    color: $colorText;
+  }
 
   &-bg {
     background: $mainColor;

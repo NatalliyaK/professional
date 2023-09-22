@@ -127,9 +127,11 @@
 
   &__inf {
     position: absolute;
-    top: 0;
+    top: 15%;
+    right: 18%;
     display: flex;
     gap: 17.6rem;
+    max-width: 123rem;
   }
 
   &__swiper {
@@ -159,6 +161,11 @@
     &:hover {
       background: $red;
     }
+  }
+
+  &__img {
+    width: 36.8rem;
+    height: 35.5rem;
   }
 }
 

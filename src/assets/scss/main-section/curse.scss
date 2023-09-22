@@ -95,8 +95,102 @@
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  color: #FFFFFF;
+  color: $colorText;
   font-size: 1rem;
 }
 
+.curse-item {
+  margin-top: 4rem;
+  margin-bottom: 14rem;
 
+  &__title {
+    position: relative;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 87%;
+      height: 0.2rem;
+      background-color: $border-color;
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 8rem 0 14rem 0;
+    max-width: 111rem;
+  }
+
+  &__subtitle {
+    font-weight: 800;
+    font-size: 4.6rem;
+    line-height: 6.8rem;
+    margin-bottom: 4rem;
+    color: $colorBg;
+  }
+
+  &__form-container {
+    padding: 6rem 9.8rem 7rem 9.8rem;
+    @include bg-color;
+    margin: 14rem 0 14rem 0;
+    text-align: center;
+  }
+
+  &__button:hover {
+    box-shadow: 0 0.8rem 1.5rem rgb(19, 19, 19);
+  }
+
+  &__form {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    &-control {
+      background: transparent;
+      width: 58rem;
+      height: 4.8rem;
+      font-size: 2rem;
+      color: $colorText;
+    }
+  }
+
+  &__cookie-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 48.4rem;
+  }
+
+  &__agree-link:hover {
+    color: $black;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 0.2rem solid $red;
+  padding: 4rem 6.4rem;
+  text-align: center;
+}
+
+table tr:nth-child(n+2):nth-child(-n+16) td:nth-child(3) {
+  text-align: left;
+  padding-left: 8rem;
+}
+
+.form--line {
+  outline: none;
+  border: none;
+  border-bottom: 0.1rem solid $colorText;
+}
