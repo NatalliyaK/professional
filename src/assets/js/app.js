@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded',() => {
   const header = document.querySelector('.header');
   const formAbout = document.querySelector('.form');
+  const formReg = document.querySelector('.curse-item__form');
 
   function handleForm (formAbout) {
     formAbout.addEventListener('submit', function (event) {
@@ -82,6 +83,10 @@ window.addEventListener('DOMContentLoaded',() => {
 
   if(formAbout) {
     handleForm(formAbout)
+  }
+
+  if(formReg) {
+    handleForm(formReg);
   }
 
 })

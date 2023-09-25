@@ -1,0 +1,32 @@
+@import '../vars';
+@import '../mixins';
+
+.contacts {
+  padding-bottom: 14rem;
+
+  &__title {
+    position: relative;
+    padding-bottom: 8rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 25%;
+      right: 0.7rem;
+      width: 81%;
+      height: 0.2rem;
+      background-color: $border-color;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__container-item {
+    display: flex;
+    gap: 2rem;
+  }
+}

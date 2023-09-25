@@ -171,6 +171,10 @@
   &__agree-link:hover {
     color: $black;
   }
+
+  &__button:hover {
+    @include bg-color;
+  }
 }
 
 table {
