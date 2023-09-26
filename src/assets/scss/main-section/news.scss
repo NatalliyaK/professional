@@ -79,15 +79,23 @@
   }
 
   &__list {
-    margin-top: 8rem;
+    & li:first-child {
+      border-top: 0.2rem solid $colorBg;
+    }
   }
 
   &__item {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-top: 0.1rem solid $colorBg;
-    border-bottom: 0.1rem solid $colorBg;
+    border-bottom: 0.2rem solid $colorBg;
+    & > div {
+      width: 100%;
+    }
+  }
+
+  &__item-text {
+    max-width: 116rem;
   }
 
   &__content {
@@ -101,5 +109,11 @@
     padding: 0.45rem 3.5rem;
     margin-top: 6rem;
   }
-}
 
+  &__item-bottom {
+    display: flex;
+    gap: 12rem;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+}
