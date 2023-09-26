@@ -1,0 +1,34 @@
+@import '../vars';
+
+.aside {
+  width: 43.5rem;
+  background: $mainColor;
+  padding: 4rem 5.7rem;
+  max-height: 167rem;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nav-bar__item span {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-bar__item span {
+  border-bottom: 0.2rem solid transparent;
+  transition: border-color 0.3s;
+}
+
+.nav-bar__item:hover span {
+  border-color: $colorText;
+}
+
+
+.nav-bar__item span.active {
+  border-bottom: 0.2rem solid $colorText;
+}
+
