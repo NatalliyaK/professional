@@ -10,7 +10,21 @@
     justify-content: space-between;
     gap: 23.4rem;
     padding-bottom: 5rem;
-    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.4);
+  }
+
+  &__menu {
+    max-width: 40.9rem;
+  }
+
+  &__line {
+    width: 90%;
+    height: 0.2rem;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  &__wrapper {
+    max-width: 143rem;
+    margin: 0 auto;
   }
 
   &__information-list,
@@ -48,7 +62,6 @@
 
   &__linc {
     display: flex;
-    align-items: center;
     gap: 1rem;
 
     &:nth-last-child {
@@ -64,7 +77,7 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    gap: 35.5rem;
+    gap: 18.8rem;
     padding-top: 3.7rem;
 
     & span {

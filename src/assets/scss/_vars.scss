@@ -13,6 +13,10 @@ $black: #000000;
   background: linear-gradient(45deg, rgba(147,32,112,1) 0%, rgba(197,20,89,1) 35%, rgba(223,39,62,1) 61%, rgba(234,88,13,1) 100%);
 }
 
+@mixin bg-scroll {
+  background: rgba(62, 34, 84, 0.25);
+}
+
 
 
 

@@ -13,22 +13,22 @@
   gap: 2rem;
 }
 
-.nav-bar__item span {
+.nav-bar__item {
   position: relative;
   cursor: pointer;
 }
 
-.nav-bar__item span {
+.nav-bar__item {
   border-bottom: 0.2rem solid transparent;
   transition: border-color 0.3s;
 }
 
-.nav-bar__item:hover span {
+.nav-bar__item:hover{
   border-color: $colorText;
 }
 
 
-.nav-bar__item span.active {
-  border-bottom: 0.2rem solid $colorText;
+.active1 {
+  border-bottom: 0.2rem solid $colorText !important;
 }
 

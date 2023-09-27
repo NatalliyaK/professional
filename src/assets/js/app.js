@@ -91,18 +91,44 @@ window.addEventListener('DOMContentLoaded',() => {
   }
 
   if(aside) {
-    const nav = document.querySelectorAll('.nav-bar');
+    const tabs = document.querySelectorAll('.nav-bar__item');
+    const tabContent = document.querySelectorAll('.tabs__content');
+    const tabsParent = document.querySelector('.nav-bar');
+    const title = document.getElementById('title');
 
-    nav.forEach(el => {
+    function hideTabContent () {
+      tabContent.forEach(elem => {
+        elem.style.display = 'none';
+      });
 
-      el.addEventListener('click', () => {
-        nav.forEach(item => {
-          item.classList.add('active')
-        })
+      tabs.forEach(tab => {
+        tab.classList.remove('active1');
       })
-    })
-  }
+    }
 
+    function showTabContent (i= 2) {
+      tabContent[i].style.display = 'block';
+      tabs[i].classList.add('active1');
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    tabsParent.addEventListener('click', (event) => {
+     const target = event.target;
+     console.log(target)
+
+      if(target && target.classList.contains('nav-bar__item')) {
+        tabs.forEach((elem,i) => {
+          if(target === elem) {
+            hideTabContent();
+            showTabContent(i);
+            title.textContent= target.textContent;
+          }
+        })
+      }
+    });
+  }
 })
 
 

@@ -1,4 +1,7 @@
+@import "../vars";
+
 .basis {
+  padding-top: 8rem;
   padding-bottom: 14rem;
   display: flex;
   gap: 4rem;
@@ -10,7 +13,7 @@
   }
 
   &__information td {
-    padding: 2rem 0 2rem 4rem;
+    padding: 2rem 2rem 2rem 4rem;
     text-align: left;
   }
 
@@ -30,10 +33,64 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    & ul {
+      padding-left: 3rem;
+    }
+
+    & ul li {
+      list-style-type: disc;
+    }
+
+    & ul li::marker {
+      font-size: 1.5rem;
+    }
+
+    & ul li:nth-child(1) {
+      margin-bottom: 2rem;
+    }
   }
+
+  &__structure {
+    & table tr td {
+      padding: 5.9rem 4rem;
+    }
+  }
+
+  &__structure-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 14rem;
+
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      @include bg-scroll;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $red;
+      border-radius: 2rem;
+    }
+  }
+
 
 }
 
 .tabs__content {
   width: 124rem;
+}
+
+table tr td:first-child {
+  width: 34%;
+}
+
+#title {
+  white-space: nowrap;
+}
+
+.linc:hover {
+  color: $red;
 }
