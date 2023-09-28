@@ -58,6 +58,7 @@
   }
 
   &__structure-table {
+    overflow: hidden;
     width: 100%;
     overflow-x: auto;
     margin-bottom: 14rem;
@@ -76,6 +77,71 @@
     }
   }
 
+  &__document,
+  &__task {
+    & ul {
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    & ul li {
+      list-style-type: disc;
+    }
+  }
+
+  &__task {
+    & ul li {
+      list-style-type: none;
+    }
+
+    & ul li::before {
+      content: "•";
+      font-size: 2.5rem;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  &__task-text {
+    margin: 4rem 0 6rem;
+  }
+
+  &__task-link,
+  &__standard_container,
+  &__paid-content,
+  &__services {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 116rem;
+  }
+
+  &__management {
+   & table td {
+      padding: 4rem 2rem;
+     text-align: left;
+    }
+  }
+
+  &__services {
+    list-style-type: disc;
+    padding-left: 2rem;
+
+    & li {
+      list-style-type: none;
+    }
+
+    & li::before {
+      content: "•";
+      font-size: 2.5rem;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
 
 }
 

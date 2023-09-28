@@ -159,6 +159,14 @@ svg {
   color: $colorBg;
 }
 
+.text-bottom {
+  padding-bottom: 4rem;
+}
+
+.text-bottom2 {
+  padding-bottom: 2rem;
+}
+
 .agree {
   width: 2.8rem;
   height: 2.8rem;
@@ -210,6 +218,16 @@ label span {
   text-decoration-thickness: 0.15rem;
   &:hover {
     color: $red;
+  }
+}
+
+.text-underline--red {
+  color: $mainColor;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.15rem;
+  &:hover {
+    text-underline-offset: 0.7rem;
   }
 }
 
