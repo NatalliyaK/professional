@@ -53,15 +53,15 @@
 
   &__structure {
     & table tr td {
-      padding: 5.9rem 4rem;
+      padding: 5.9rem;
     }
   }
 
-  &__structure-table {
+  &__structure-table,
+  &__education-table {
     overflow: hidden;
     width: 100%;
     overflow-x: auto;
-    margin-bottom: 14rem;
 
     &::-webkit-scrollbar {
       width: 0.8rem;
@@ -73,8 +73,15 @@
 
     &::-webkit-scrollbar-thumb {
       background: $red;
-      border-radius: 2rem;
     }
+
+    &::-webkit-scrollbar-thumb:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__document .text {
+    display: inline;
   }
 
   &__document,
@@ -112,7 +119,8 @@
   &__task-link,
   &__standard_container,
   &__paid-content,
-  &__services {
+  &__services,
+  &__education {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -141,6 +149,17 @@
       width: 1em;
       margin-left: -1em;
     }
+  }
+
+  &__schedule,
+  &__education {
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+  }
+
+  &__schedule table tbody tr td.text-center {
+    text-align: center;
   }
 
 }
