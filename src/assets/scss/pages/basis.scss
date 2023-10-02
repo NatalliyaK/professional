@@ -85,7 +85,8 @@
   }
 
   &__document,
-  &__task {
+  &__task,
+  &__example {
     & ul {
       padding-left: 2rem;
       display: flex;
@@ -98,7 +99,8 @@
     }
   }
 
-  &__task {
+  &__task,
+  &__example{
     & ul li {
       list-style-type: none;
     }
@@ -162,6 +164,18 @@
     text-align: center;
   }
 
+  &__partners {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__partner-block {
+    padding: 4rem;
+    background: $mainColor;
+    width: 70.5rem;
+  }
+
 }
 
 .tabs__content {
@@ -178,4 +192,107 @@ table tr td:first-child {
 
 .linc:hover {
   color: $red;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 14rem;
+  &-wrapper__swiper {
+    position: relative;
+    width: 124rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__swiper,
+  &__swiper2,
+  &__swiper3 {
+    overflow: hidden;
+    width: 110rem;
+    height: 66rem;
+  }
+
+  &__swiper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: $mainColor;
+    cursor: pointer;
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__inventory {
+    display: flex;
+    gap: 9rem;
+    max-height: 37rem;
+    position: relative;
+    right: 32%;
+  }
+
+  &__inventory-card {
+    display: flex;
+  }
+
+  &__inventory-item {
+    background: $mainColor;
+    padding: 4rem;
+  }
+
+  &__number {
+    font-weight: 800;
+    font-size: 20rem;
+    line-height: 13rem;
+    color: $colorText;
+    text-align: right;
+  }
+
+  & img {
+    height: 100%;
+  }
+
+  &__banner {
+    display: flex;
+    max-height: 83.7rem;
+    max-width: 172rem;
+    position: relative;
+    right: 32%;
+  }
+
+  &__information {
+    @include bg-color;
+    padding: 8rem 18.2rem 0 8rem;
+    width: 100rem;
+    position: relative;
+    & .title {
+      width: 80.3rem;
+    }
+  }
+
+  &__information-img {
+    position: absolute;
+    left: 52%;
+    opacity: 0.3;
+  }
+
+
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
 }

@@ -43,3 +43,33 @@ const aboutUsSlider = new Swiper('.about-us__swiper', {
         prevEl: '.about-us-btn-next',
     },
 })
+
+function initSwiper(containerSelector, swiperParams) {
+    return new Swiper(containerSelector, swiperParams);
+}
+
+let swiperParams = {
+    loop: true,
+    slidesPerView: 1,
+    dynamicBullets: true,
+    spaceBetween: 30,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+
+    navigation: {
+        nextEl: '.gallery__swiper-button-prev',
+        prevEl: '.gallery__swiper-button-next',
+    },
+};
+
+let gallerySlider1 = initSwiper('.gallery__swiper', swiperParams);
+let gallerySlider2 = initSwiper('.gallery__swiper2', swiperParams);
+let gallerySlider3 = initSwiper('.gallery__swiper3', swiperParams);
+
+
+
+
+
