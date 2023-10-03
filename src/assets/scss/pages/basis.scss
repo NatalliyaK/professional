@@ -29,7 +29,8 @@
     gap: 6rem;
   }
 
-  &__prof-content {
+  &__prof-content,
+  &__provision-content {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -58,7 +59,8 @@
   }
 
   &__structure-table,
-  &__education-table {
+  &__education-table,
+  &__provision-table {
     overflow: hidden;
     width: 100%;
     overflow-x: auto;
@@ -86,7 +88,9 @@
 
   &__document,
   &__task,
-  &__example {
+  &__example,
+  &__provision-item,
+  &__panel {
     & ul {
       padding-left: 2rem;
       display: flex;
@@ -97,6 +101,10 @@
     & ul li {
       list-style-type: disc;
     }
+  }
+
+  &__panel {
+    display: none;
   }
 
   &__task,
@@ -136,6 +144,12 @@
     }
   }
 
+  &__provision {
+    &-title {
+      max-width: 70rem;
+    }
+  }
+
   &__services {
     list-style-type: disc;
     padding-left: 2rem;
@@ -154,7 +168,8 @@
   }
 
   &__schedule,
-  &__education {
+  &__education,
+  &__provision {
     display: flex;
     flex-direction: column;
     gap: 14rem;
@@ -176,6 +191,33 @@
     width: 70.5rem;
   }
 
+  &__partner-block {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: slideInFromRight 0.5s ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  &__partner-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .tabs__content {
@@ -286,7 +328,6 @@ table tr td:first-child {
     left: 52%;
     opacity: 0.3;
   }
-
 
 }
 

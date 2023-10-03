@@ -3,6 +3,8 @@ window.addEventListener('DOMContentLoaded',() => {
   const formAbout = document.querySelector('.form');
   const formReg = document.querySelector('.curse-item__form');
   const aside = document.querySelector('.aside');
+  const partners = document.querySelector('.basis__partners');
+  const accordion =document.querySelector('.accordion');
 
   function handleForm (formAbout) {
     formAbout.addEventListener('submit', function (event) {
@@ -106,7 +108,7 @@ window.addEventListener('DOMContentLoaded',() => {
       })
     }
 
-    function showTabContent (i= 25) {
+    function showTabContent (i= 8) {
       tabContent[i].style.display = 'block';
       tabs[i].classList.add('active1');
     }
@@ -129,7 +131,28 @@ window.addEventListener('DOMContentLoaded',() => {
       }
     });
   }
+
+  if (partners) {
+    let blocks = document.querySelectorAll('.basis__partner-block');
+
+    blocks.forEach((block, index) => {
+      block.style.animationDelay = `${index * 0.5}s`;
+    });
+  }
+
+  if(accordion) {
+    let acc = document.querySelectorAll('.button__accordion');
+    let panel = document.querySelectorAll('.basis__panel');
+
+    acc.forEach(elem => {
+      elem.addEventListener('click', () => {
+
+      })
+    })
+  }
 })
+
+
 
 
 

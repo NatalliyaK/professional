@@ -44,30 +44,32 @@ const aboutUsSlider = new Swiper('.about-us__swiper', {
     },
 })
 
-function initSwiper(containerSelector, swiperParams) {
-    return new Swiper(containerSelector, swiperParams);
+function initSwiper(containerSelector) {
+    return new Swiper(containerSelector, {
+        loop: true,
+            slidesPerView: 1,
+            dynamicBullets: true,
+            spaceBetween: 30,
+
+            pagination: {
+            el: '.swiper-pagination',
+                clickable: true
+        },
+
+        navigation: {
+            nextEl: `${containerSelector}-button-prev`,
+
+            prevEl: `${containerSelector}-button-next`,
+        },
+    });
+
 }
 
-let swiperParams = {
-    loop: true,
-    slidesPerView: 1,
-    dynamicBullets: true,
-    spaceBetween: 30,
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
 
-    navigation: {
-        nextEl: '.gallery__swiper-button-prev',
-        prevEl: '.gallery__swiper-button-next',
-    },
-};
-
-let gallerySlider1 = initSwiper('.gallery__swiper', swiperParams);
-let gallerySlider2 = initSwiper('.gallery__swiper2', swiperParams);
-let gallerySlider3 = initSwiper('.gallery__swiper3', swiperParams);
+let gallerySlider1 = initSwiper('.gallery__swiper' );
+let gallerySlider2 = initSwiper('.gallery__swiper2');
+let gallerySlider3 = initSwiper('.gallery__swiper3' );
 
 
 
