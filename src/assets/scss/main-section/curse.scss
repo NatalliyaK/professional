@@ -5,6 +5,9 @@
 .curse {
   margin-top: 14rem;
   margin-bottom: 14rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 8rem;
+  }
 
   &__title {
     position: relative;
@@ -26,7 +29,13 @@
     justify-content: space-between;
     margin: 8rem 0;
     gap: 28rem;
-    align-items: flex-end
+    align-items: flex-end;
+    @include breakpoint($xl-bp) {
+      margin: 4rem 0;
+      flex-direction: column;
+      gap: 0;
+      align-items: flex-start;
+    }
   }
 
   &__slider {
@@ -64,11 +73,19 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    @include breakpoint($xl-bp) {
+      padding: 2rem 2rem 2.4rem 2rem;
+      height: 35rem;
+    }
   }
 
   &__button {
     width: 32.3rem;
     margin-top: 5.7rem;
+    @include breakpoint($xl-bp) {
+      width: 18.3rem;
+      margin-top: 2rem;
+    }
 
     &:hover {
       background: $red;

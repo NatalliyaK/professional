@@ -4,18 +4,41 @@
 .about {
   display: flex;
   max-height: 66.2rem;
+  @include breakpoint($xl-bp) {
+    padding: 4rem 3.5rem;
+    position: static;
+    flex-direction: column;
+  }
 
  &__information {
    padding: 8rem 11rem 6.6rem 6.2rem;
    @include bg-color;
    position: relative;
    max-width: 99rem;
+   @include breakpoint($xl-bp) {
+    padding: 4rem 3.5rem;
+    position: static;
+    max-width: 64rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   &__information h1 {
+     @include breakpoint($xl-bp) {
+       text-align: center;
+     }
+   }
 
    &-img {
      position: absolute;
      bottom: 4rem;
      right: 3rem;
      opacity: 0.3;
+     @include breakpoint($xl-bp) {
+        display: none;
+     }
    }
  }
 
@@ -35,6 +58,11 @@
     &-element {
       margin-bottom: 2rem;
     }
+    @include breakpoint($xl-bp) {
+      padding: 4rem 2.3rem 4rem 3.4rem;
+      max-width: 64rem;
+      gap: 2rem;
+    }
   }
 
   &__cookie-banner {
@@ -43,6 +71,9 @@
     gap: 2rem;
     align-items: center;
     width: 46.4rem;
+    @include breakpoint($xl-bp) {
+      margin: 4rem auto;
+    }
   }
 
   &__subtitle {
@@ -56,6 +87,9 @@
     border: none;
     border-bottom: 0.2rem solid $border-color;
     outline: none;
+    @include breakpoint($xl-bp) {
+      width: 45rem;
+    }
   }
 
   &__button-container {
@@ -63,6 +97,9 @@
     justify-content: center;
     align-self: center;
     margin-top: 7rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 4rem;
+    }
   }
 
   &__information-list {
@@ -70,6 +107,10 @@
     flex-direction: column;
     gap: 2rem;
     margin: 4rem 0 10rem 4rem;
+    @include breakpoint($xl-bp) {
+      gap: 1rem;
+      margin: 2rem 4rem;
+    }
   }
 
   &__information-item {

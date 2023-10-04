@@ -3,6 +3,9 @@
 
 .info {
   padding-top: 14rem;
+  @include breakpoint($xl-bp) {
+    padding-top: 22rem;
+  }
 
   &__container {
     max-width: 116rem;
@@ -17,6 +20,9 @@
     padding: 0.4rem 3.1rem;
     &:hover {
       background: $red;
+    }
+    @include breakpoint($xl-bp) {
+      margin-top: 6rem;
     }
   }
 

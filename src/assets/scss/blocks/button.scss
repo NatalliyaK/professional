@@ -12,6 +12,11 @@
   &:hover {
     color: $colorText;
   }
+  @include breakpoint($xl-bp) {
+    width: 25rem;
+    height: 4.1rem;
+    padding: 1rem 4.3rem;
+  }
 
   &-bg {
     background: $mainColor;

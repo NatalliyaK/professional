@@ -16,6 +16,12 @@
     justify-content: space-between;
   }
 
+  & .button-small {
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
+
   &-svg {
     height: 2.5rem;
     width: 3.6rem;
@@ -28,6 +34,9 @@
   &__text {
     width: 37rem;
     margin-right: 14rem;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
   }
 
   &__text a {
@@ -44,6 +53,9 @@
     width: 90rem;
     margin-right: 4.5rem;
     height: 4rem;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
   }
 
   &__optic {
@@ -73,6 +85,9 @@
 
   &__menu {
     margin-left: 5rem;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
   }
 
   &__menu .menu__list {
