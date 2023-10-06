@@ -2,23 +2,75 @@
 @import '../mixins';
 
 .header {
-  padding: 4rem 0;
+  padding: 2rem 0;
   height: 20rem;
   top: -9rem;
   background: $colorText;
   z-index: 20;
   position: sticky;
+  @include breakpoint($xl-bp) {
+    height: 16rem;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  @include breakpoint($sm-bp) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 9rem;
+    width: 33rem;
+    margin: 0 auto;
+  }
+
   &__top {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 1rem;
     transition: all 2s ease;
     justify-content: space-between;
+    @include breakpoint($sm-bp) {
+      justify-content: flex-end
+    }
   }
 
-  & .button-small {
-    @include breakpoint($xl-bp) {
+  & .button {
+    position: relative;
+    overflow: hidden;
+    background: $mainColor;
+    color: #fff !important;
+    font-size: 0.950em;
+    text-transform:  uppercase;
+    transition: .2s ease-in-out;
+    @include breakpoint($sm-bp) {
       display: none;
+    }
+    &:before {
+      content: "";
+      background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+      height: 6rem;
+      width: 5rem;
+      position: absolute;
+      top: 0;
+      left: -9.7rem;
+      transform: skewX(-45deg);
+    }
+
+    &:hover {
+      background: $red;
+      color: #fff !important;
+    }
+
+    &:hover:before {
+      left: 100%;
+      transition: .5s ease-in-out;
+    }
+    &:focus {
+      background: $mainColor;
+      color: #fff !important;
+      outline: none;
+    }
+    @include breakpoint($xl-bp) {
+      padding: 1rem 0;
     }
   }
 
@@ -33,7 +85,7 @@
 
   &__text {
     width: 37rem;
-    margin-right: 14rem;
+    margin-right: 1rem;
     @include breakpoint($xl-bp) {
       display: none;
     }
@@ -50,9 +102,9 @@
 
   &__search {
     position: relative;
-    width: 90rem;
+    width: 44.9rem;
     margin-right: 4.5rem;
-    height: 4rem;
+    height: 3.4rem;
     @include breakpoint($xl-bp) {
       display: none;
     }
@@ -81,6 +133,9 @@
   &__logo-container {
     display: flex;
     gap: 3.5rem;
+    @include breakpoint($sm-bp) {
+      gap: 1.5rem;
+    }
   }
 
   &__menu {
@@ -143,6 +198,10 @@
     flex-direction: column;
     align-self: center;
     justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      width: 3rem;
+      height: 2rem;
+    }
   }
 
   &__burger span {
@@ -159,6 +218,14 @@
     & img {
       width: 8rem;
       height: 6.5rem;
+      @include breakpoint($xl-bp) {
+        width: 7rem;
+        height: 5.5rem;
+      }
+      @include breakpoint($sm-bp) {
+        width: 4.9rem;
+        height: 3.9rem;
+      }
     }
 
     &-text {
@@ -169,6 +236,14 @@
       color: $mainColor;
       &:hover {
         color: $red;
+      }
+      @include breakpoint($xl-bp) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      @include breakpoint($sm-bp) {
+        font-size: 1.4rem;
+        line-height: 2rem;
       }
     }
   }
@@ -182,16 +257,23 @@
     &:hover {
       color: $red;
     }
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 7rem;
+    }
   }
 
   &__tel,
   &__menu {
     align-self: end;
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &__mob {
     position: fixed;
-    left: -100%;
+    left: -165%;
     width: 100%;
     height: calc(100vh + 5%);
     background-color: rgba(62, 34, 53, 0.7);
@@ -204,7 +286,9 @@
       background: $mainColor;
       height: 100%;
       overflow-y: scroll;
-
+      @include breakpoint($sm-bp) {
+        width: 44.6rem;
+      }
     }
 
     &-item a {
@@ -220,6 +304,9 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      @include breakpoint($sm-bp) {
+        padding: 8rem 9.5rem 8rem 3rem;
+      }
     }
 
     &-close {

@@ -72,6 +72,9 @@ svg {
   @include breakpoint($xl-bp) {
     width: 62rem;
   }
+  @include breakpoint($sm-bp) {
+    width: 33rem;
+  }
 
   &__container-title {
     padding-top: 4rem;

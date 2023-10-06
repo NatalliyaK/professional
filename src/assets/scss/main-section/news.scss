@@ -4,6 +4,9 @@
 
 .news {
   padding-bottom: 14rem;
+  @include breakpoint($sm-bp) {
+    padding-bottom: 8rem;
+  }
   &__title {
     position: relative;
 
@@ -15,11 +18,17 @@
       width: 81%;
       height: 0.2rem;
       background-color: $border-color;
+      @include breakpoint($sm-bp) {
+        right: -4.3rem;
+      }
     }
   }
 
   &__container {
     padding-top: 8rem;
+    @include breakpoint($sm-bp) {
+      padding-top: 4rem;
+    }
   }
 
   &__item {
@@ -27,9 +36,15 @@
     justify-content: space-between;
     padding: 4rem 0 2rem;
     border-bottom: 0.2rem solid $border-color;
+    @include breakpoint($xl-bp) {
+      flex-direction: column-reverse;
+      padding: 2rem 0;
+      gap: 6rem;
+    }
     &:first-child {
       padding-top: 0;
     }
+
 
     &-text {
       display: flex;
@@ -37,11 +52,25 @@
       align-self: center;
     }
 
+    &-text p {
+      @include breakpoint($xl-bp) {
+        align-self: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+      }
+    }
+
     &-card {
       color: $colorBg;
       font-weight: 800;
       font-size: 2rem;
       line-height: 2.9rem;
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
     }
   }
 

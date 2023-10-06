@@ -4,12 +4,19 @@
 .footer {
   background: $colorBg;
   padding: 5.5rem 0 8.3rem;
+  @include breakpoint($xl-bp) {
+    padding: 4rem 0;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
     gap: 23.4rem;
     padding-bottom: 5rem;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   &__menu {
@@ -25,6 +32,12 @@
   &__wrapper {
     max-width: 143rem;
     margin: 0 auto;
+    @include breakpoint($xl-bp) {
+      max-width: 55rem;
+    }
+    @include breakpoint($sm-bp) {
+      max-width: 23rem;
+    }
   }
 
   &__information-list,
@@ -45,6 +58,10 @@
   &__svg {
     width: 4rem;
     height: 4rem;
+    @include breakpoint($xl-bp) {
+      width: 3rem;
+      height: 3rem;
+    }
     &:hover {
       stroke: $mainColor;
     }
@@ -79,6 +96,10 @@
     justify-content: space-between;
     gap: 18.8rem;
     padding-top: 3.7rem;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     & span {
       @include color-opacity
@@ -96,6 +117,10 @@
   &__logo {
     width: 8rem;
     height: 6.7rem;
+    @include breakpoint($xl-bp) {
+      width: 4.9rem;
+      height: 3.9rem;
+    }
 
     &:hover {
       stroke: $mainColor;

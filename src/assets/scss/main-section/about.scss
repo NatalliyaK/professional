@@ -5,9 +5,13 @@
   display: flex;
   max-height: 66.2rem;
   @include breakpoint($xl-bp) {
-    padding: 4rem 3.5rem;
+    padding: 0 3.5rem;
     position: static;
     flex-direction: column;
+  }
+  @include breakpoint($xl-bp) {
+    width: 33rem;
+    margin: 0 auto;
   }
 
  &__information {
@@ -23,6 +27,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   }
+   @include breakpoint($sm-bp) {
+     width: 34rem;
    }
 
    &__information h1 {
@@ -55,14 +62,24 @@
     flex-direction: column;
     gap: 4rem;
     justify-content: space-around;
+    @include breakpoint($sm-bp) {
+      width: 34rem;
+    }
     &-element {
       margin-bottom: 2rem;
+      @include breakpoint($xl-bp) {
+        margin-bottom: 1rem;
+      }
     }
     @include breakpoint($xl-bp) {
       padding: 4rem 2.3rem 4rem 3.4rem;
       max-width: 64rem;
       gap: 2rem;
     }
+  }
+
+  &__form .text__subtitle {
+    text-align: left;
   }
 
   &__cookie-banner {
@@ -73,6 +90,9 @@
     width: 46.4rem;
     @include breakpoint($xl-bp) {
       margin: 4rem auto;
+    }
+    @include breakpoint($sm-bp) {
+      width: 26rem;
     }
   }
 
@@ -89,6 +109,9 @@
     outline: none;
     @include breakpoint($xl-bp) {
       width: 45rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 28rem;
     }
   }
 

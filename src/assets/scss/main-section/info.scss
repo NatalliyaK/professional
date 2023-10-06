@@ -4,7 +4,10 @@
 .info {
   padding-top: 14rem;
   @include breakpoint($xl-bp) {
-    padding-top: 22rem;
+    padding-top: 12rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding-top: 20rem;
   }
 
   &__container {

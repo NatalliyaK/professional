@@ -8,6 +8,9 @@
   @include breakpoint($xl-bp) {
     margin-top: 8rem;
   }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 0;
+  }
 
   &__title {
     position: relative;
@@ -21,6 +24,9 @@
       width: 87%;
       height: 0.2rem;
       background-color: $border-color;
+      @include breakpoint($xl-bp) {
+        width: 75%;
+      }
     }
   }
 
@@ -86,6 +92,9 @@
       width: 18.3rem;
       margin-top: 2rem;
     }
+    @include breakpoint($xl-bp) {
+      width: 14.3rem;
+    }
 
     &:hover {
       background: $red;
@@ -108,6 +117,17 @@
   &:hover {
     background: $red;
   }
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.btn-prev {
+  left: -5%;
+}
+
+.btn-next {
+  right: -10%;
 }
 
 .swiper-button-prev:after,

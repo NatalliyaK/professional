@@ -3,6 +3,9 @@
 
 .project {
   padding-bottom: 14rem;
+  @include breakpoint($sm-bp) {
+    padding-bottom: 0;
+  }
   &__title {
     position: relative;
     padding-right: 8rem;
@@ -29,12 +32,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 6rem;
       & li {
         display: flex;
         gap: 1rem;
       }
-
-    margin-bottom: 6rem;
   }
 
   &__content {
@@ -54,11 +56,17 @@
     margin-top: 2rem;
     margin-left: auto;
     display: block;
+    @include breakpoint($sm-bp) {
+      padding: 1rem 3rem;
+    }
   }
 
   &__img {
    width: 70.9rem;
     max-height: 47rem;
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
 
     & img {
       height: 100%;
@@ -88,6 +96,10 @@
     overflow: hidden;
     height: 47rem;
   }
+
+  & .title-slider {
+    color: $colorText;
+  }
 }
 
 .project-btn-prev,
@@ -103,6 +115,9 @@
   border-radius: 50%;
   &:hover {
     background: $red;
+  }
+  @include breakpoint($sm-bp) {
+  display: none;
   }
 }
 
@@ -121,6 +136,10 @@
   gap: 6rem;
   background: $mainColor;
   max-width: 70.5rem;
+  @include breakpoint($sm-bp) {
+    padding: 2rem 3rem 3rem 3rem;
+    max-width: 33rem;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -130,6 +149,9 @@
   opacity: 1;
   border-radius: 50%;
   border: 0.2rem solid $mainColor;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet-active {

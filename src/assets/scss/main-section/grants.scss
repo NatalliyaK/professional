@@ -4,7 +4,9 @@
 
 .grants {
   padding-bottom: 14rem;
-
+  @include breakpoint($sm-bp) {
+    padding-bottom: 2rem;
+  }
   &__title {
     position: relative;
 
@@ -19,6 +21,10 @@
       @include breakpoint($xl-bp) {
         left: 44%;
         width: 60%;
+      }
+      @include breakpoint($sm-bp) {
+        left: 82%;
+        width: 22%;
       }
     }
   }
@@ -40,6 +46,11 @@
     height: 62.8rem;
     @include breakpoint($xl-bp) {
       padding: 4rem 1.8rem;
+      gap: 1rem;
+      height: 54rem;
+    }
+    @include breakpoint($xl-bp) {
+      height: 63rem;
     }
   }
 
@@ -48,6 +59,13 @@
     font-size: 20rem;
     line-height: 14rem;
     color: $border-color;
+    @include breakpoint($xl-bp) {
+      font-size: 17rem;
+      line-height: 11rem;
+    }
+    @include breakpoint($sm-bp) {
+      font-size: 8rem;
+    }
   }
 
   &__information {
@@ -61,6 +79,10 @@
     font-size: 2rem;
     line-height: 2.9rem;
     margin-top: 2rem;
+    @include breakpoint($sm-bp) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
   }
 
   &__content {
@@ -77,9 +99,21 @@
     background: $mainColor;
     color: $colorText;
     cursor: pointer;
-
+    @include breakpoint($sm-bp) {
+      width: 23rem;
+      height: 4.1rem;
+      padding: 1rem 3.3rem;
+    }
     &:hover {
       @include bg-color;
     }
   }
+}
+
+.left_button {
+  left: -5%;
+}
+
+.right_button {
+  right: -10%;
 }
