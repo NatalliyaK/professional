@@ -4,7 +4,10 @@ title: Проекты
 ---
 
 <section class="project wrapper">
-    <h1 class="project__title title project__title--bottom">Проекты</h1>
+    <div class="wrapper__content-title">
+        <h1 class="title project__title--bottom">Проекты</h1>
+        <div class="wrapper__container-item"></div>
+    </div>
     <div class="project-detail">
         <div class="project-detail__container">
             <div class="project-detail__text">
@@ -19,7 +22,10 @@ title: Проекты
                 <button class="project-detail__button button text__button">Подробнее</button>
             </div>
             <div class="project-detail__img">
-                <img src="assets/images/project_img-ball.jpg" alt="photo">
+                <picture>
+                    <source srcset="./assets/images/project-slidemob.jpg" media="(max-width: 600px)" />
+                    <img src="./assets/images/project_img-ball.jpg" alt="image">
+                </picture>
             </div>
         </div>
         <div class="project-detail__container">
@@ -34,7 +40,10 @@ title: Проекты
                 <button class="project-detail__button button text__button">Подробнее</button>
             </div>
             <div class="project-detail__img">
-                <img src="assets/images/project_img-flag.jpg" alt="photo">
+                <picture>
+                    <source srcset="./assets/images/project-slide2mob.jpg" media="(max-width: 600px)" />
+                    <img src="./assets/images/project_img-flag.jpg" alt="image">
+                </picture>
             </div>
         </div>
         <div class="project-detail__container">
@@ -49,7 +58,10 @@ title: Проекты
                 <button class="project-detail__button button text__button">Подробнее</button>
             </div>
             <div class="project-detail__img">
-                <img src="assets/images/project_img-boock.jpg" alt="photo">
+                <picture>
+                    <source srcset="./assets/images/project_img-boockmob.jpg" media="(max-width: 600px)" />
+                    <img src="./assets/images/project_img-boock.jpg" alt="image">
+                </picture>
             </div>
         </div>
     </div>

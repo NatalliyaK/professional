@@ -61,6 +61,8 @@ window.addEventListener('DOMContentLoaded',() => {
     const headerBurger = document.querySelector('.header__burger');
     const headerMob = document.querySelector('.header__mob');
     const closeMenuSubstrate = document.querySelector('.header__mob-menu');
+    const headerMenuMob = document.querySelector('.header__mob-item');
+
 
     window.onscroll = function() {
       let scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -75,12 +77,16 @@ window.addEventListener('DOMContentLoaded',() => {
 
     headerBurger.addEventListener('click', function () {
       headerMob.classList.toggle('show');
+      if (document.documentElement.clientWidth < 1024) {
+        headerMenuMob.classList.remove('hide');
+        headerMenuMob.classList.add('show');
+      }
+
     } )
 
     closeMenuSubstrate.addEventListener('click', function () {
       headerMob.classList.toggle('show');
     })
-
 
   }
 

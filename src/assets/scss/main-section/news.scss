@@ -7,22 +7,6 @@
   @include breakpoint($sm-bp) {
     padding-bottom: 8rem;
   }
-  &__title {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0.7rem;
-      width: 81%;
-      height: 0.2rem;
-      background-color: $border-color;
-      @include breakpoint($sm-bp) {
-        right: -4.3rem;
-      }
-    }
-  }
 
   &__container {
     padding-top: 8rem;

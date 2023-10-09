@@ -6,24 +6,6 @@
   @include breakpoint($sm-bp) {
     padding-bottom: 0;
   }
-  &__title {
-    position: relative;
-    padding-right: 8rem;
-    padding-top: 4rem;
-    &--bottom {
-      padding-bottom: 8rem;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 40%;
-        right: 0.7rem;
-        width: 81%;
-        height: 0.2rem;
-        background-color: $border-color;
-      }
-    }
-  }
 
   &__inf {
     background: $mainColor;
@@ -105,8 +87,8 @@
 .project-btn-prev,
 .project-btn-next {
   position: absolute;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 4rem;
+  height: 4rem;
   background: $mainColor;
   transform: translate(-50%);
   top: 50%;
@@ -115,6 +97,10 @@
   border-radius: 50%;
   &:hover {
     background: $red;
+  }
+  @include breakpoint($xl-bp) {
+    width: 3rem;
+    height: 3rem;
   }
   @include breakpoint($sm-bp) {
   display: none;
@@ -128,7 +114,7 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
   color: $colorText;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .swiper-slide-text {
@@ -166,12 +152,22 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
+  margin-top: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+  }
 
   &__container {
     max-height: 46rem;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    @include breakpoint($xl-bp) {
+      gap: 0;
+      flex-direction: column;
+      max-height: 80rem;
+    }
   }
 
   &__img {
@@ -206,7 +202,10 @@
     background-size: 100% 200%;
     background-position: top;
     transition: background-position 0.5s ease-in-out;
-
+    @include breakpoint($xl-bp) {
+      width: 23rem;
+      height: 3.8rem;
+    }
   &:hover{
     background-position: bottom;
   }
@@ -215,6 +214,10 @@
   &__title {
     font-size: 2rem;
     line-height: 3.8rem;
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 2.9rem;
+    }
   }
 
   &__text-card {
@@ -224,6 +227,9 @@
 
   &__inf {
     margin: 6rem 0 5.8rem;
+    @include breakpoint($sm-bp) {
+      margin: 2rem 0 4rem;
+    }
     & h4 {
       display: inline-block;
       padding-right: 1rem;

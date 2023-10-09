@@ -4,7 +4,10 @@ title: О нас
 ---
 
 <section class="about-us wrapper">
-    <h1 class="about-us__title title">О нас</h1>
+    <div class="wrapper__content-title">
+        <h1 class="about-us__title title">О нас</h1>
+        <div class="wrapper__container-item"></div>
+    </div>
     <div class="about-us__information">
         <p class="text">Институт непрерывного образования «Профессионал» ставит своей целью содействие формированию национальной сети непрерывного образования для всех категорий граждан
             вне зависимости от места их проживания и нахождения. Для этого институт ведет активное сотрудничество с общественными, государственными и коммерческими организациями
@@ -35,7 +38,10 @@ title: О нас
         <div class="swiper-button-next about-us-btn-next btn-right"></div>
     </div>
     <div class="about-us__img-container">
-        <img src="assets/images/about-us-buttom.jpg" alt="image">
+        <picture>
+            <source srcset="./assets/images/about-us-buttom2.jpg" media="(max-width: 600px)" />
+            <img src="./assets/images/about-us-buttom.jpg" alt="image">
+        </picture>
         <div class="about-us__inf">
             <div>
                 <svg class="about-us__img">

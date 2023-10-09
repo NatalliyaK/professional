@@ -7,27 +7,6 @@
   @include breakpoint($sm-bp) {
     padding-bottom: 2rem;
   }
-  &__title {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 38%;
-      width: 63%;
-      height: 0.2rem;
-      background-color: $border-color;
-      @include breakpoint($xl-bp) {
-        left: 44%;
-        width: 60%;
-      }
-      @include breakpoint($sm-bp) {
-        left: 82%;
-        width: 22%;
-      }
-    }
-  }
 
   &__container {
     margin-top: 8rem;
@@ -47,9 +26,9 @@
     @include breakpoint($xl-bp) {
       padding: 4rem 1.8rem;
       gap: 1rem;
-      height: 54rem;
+      height: 50rem;
     }
-    @include breakpoint($xl-bp) {
+    @include breakpoint($sm-bp) {
       height: 63rem;
     }
   }
@@ -111,9 +90,13 @@
 }
 
 .left_button {
-  left: -5%;
+  @include breakpoint($xl-bp) {
+    left: -5%;
+  }
 }
 
 .right_button {
-  right: -10%;
+  @include breakpoint($xl-bp) {
+    right: -10%;
+  }
 }

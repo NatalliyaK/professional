@@ -12,24 +12,6 @@
     margin-bottom: 0;
   }
 
-  &__title {
-    position: relative;
-    padding-right: 8rem;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 87%;
-      height: 0.2rem;
-      background-color: $border-color;
-      @include breakpoint($xl-bp) {
-        width: 75%;
-      }
-    }
-  }
-
   &__container {
     display: flex;
     justify-content: space-between;
@@ -108,12 +90,16 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%);
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   z-index: 10;
   background-color: $mainColor;
   border-radius: 50%;
   cursor: pointer;
+  @include breakpoint($xl-bp) {
+    width: 3rem;
+    height: 3rem;
+  }
   &:hover {
     background: $red;
   }
@@ -123,37 +109,25 @@
 }
 
 .btn-prev {
-  left: -5%;
+  @include breakpoint($xl-bp) {
+    left: -5%;
+  }
 }
 
 .btn-next {
-  right: -10%;
+  @include breakpoint($xl-bp) {
+    right: -10%;
+  }
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
   color: $colorText;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .curse-item {
-  margin-top: 4rem;
   margin-bottom: 14rem;
-
-  &__title {
-    position: relative;
-
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 87%;
-      height: 0.2rem;
-      background-color: $border-color;
-    }
-  }
 
   &__information {
     display: flex;
@@ -161,6 +135,9 @@
     gap: 4rem;
     margin: 8rem 0 14rem 0;
     max-width: 111rem;
+    @include breakpoint($sm-bp) {
+      margin: 4rem 0 8rem 0;
+    }
   }
 
   &__subtitle {
@@ -169,6 +146,9 @@
     line-height: 6.8rem;
     margin-bottom: 4rem;
     color: $colorBg;
+    @include breakpoint($xl-bp) {
+     display: none;
+    }
   }
 
   &__form-container {
@@ -211,6 +191,29 @@
 
   &__button:hover {
     @include bg-color;
+  }
+
+  &__table {
+    overflow: hidden;
+    width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      @include bg-scroll;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $red;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      cursor: pointer;
+    }
+
   }
 }
 

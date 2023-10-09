@@ -4,6 +4,7 @@ $mainColor: #C51459;
 $red: #DF273E;
 $border-color: #3E2235;
 $black: #000000;
+$border-menu: rgba(255, 255, 255, 0.25);
 
 @mixin color-opacity {
   color: rgba(255, 255, 255, 0.4);

@@ -9,9 +9,10 @@
     position: static;
     flex-direction: column;
   }
-  @include breakpoint($xl-bp) {
+  @include breakpoint($sm-bp) {
     width: 33rem;
     margin: 0 auto;
+    padding: 0;
   }
 
  &__information {
@@ -149,20 +150,19 @@
 
 .about-us {
   margin-bottom: 14rem;
-    &__title {
-      position: relative;
-      margin-bottom: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-bottom: 8rem;
+  }
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 11%;
-        width: 89%;
-        height: 0.2rem;
-        background-color: $border-color;
-      }
+  & .wrapper__container-item {
+    width: 90%;
+    @include breakpoint($xl-bp) {
+      width: 85%;
     }
+    @include breakpoint($sm-bp) {
+      width: 70%;
+    }
+  }
 
   &__information {
     margin-bottom: 14rem;
@@ -170,6 +170,11 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    @include breakpoint($xl-bp) {
+      gap: 2rem;
+      margin-bottom: 8rem;
+      margin-top: 4rem;
+    }
   }
 
   &__img-container {
@@ -187,6 +192,15 @@
     justify-content: center;
     align-items: center;
     margin: 4rem auto 14rem;
+    @include breakpoint($xl-bp) {
+      margin-bottom: 8rem;
+    }
+
+    & img {
+      @include breakpoint($sm-bp) {
+        width: 100%;
+      }
+    }
   }
 
   &__inf {
@@ -196,12 +210,29 @@
     display: flex;
     gap: 17.6rem;
     max-width: 123rem;
+    @include breakpoint($xl-bp) {
+      top: 2%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      max-width: 40rem;
+    }
+    @include breakpoint($xl-bp) {
+      max-width: 20rem;
+      align-items: flex-start
+    }
   }
 
   &__swiper {
     max-width: 110.4rem;
     overflow: hidden;
     max-height: 66rem;
+    @include breakpoint($sm-bp) {
+      max-width: 34rem;
+      max-height: 34rem;
+    }
   }
 
   &-pagination {
@@ -230,6 +261,10 @@
   &__img {
     width: 36.8rem;
     height: 35.5rem;
+    @include breakpoint($xl-bp) {
+      width: 12.4rem;
+      height: 11.3rem;
+    }
   }
 }
 
@@ -241,10 +276,22 @@
 
 .btn-left {
   left: 15%;
+  @include breakpoint($xl-bp) {
+    left: -5%;
+  }
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
 }
 
 .btn-right {
   right: 13%;
+  @include breakpoint($xl-bp) {
+    right: -8%;
+  }
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
 }
 
 .swiper-pagination span {

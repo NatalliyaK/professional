@@ -46,7 +46,22 @@
   <div class="header__mob wrapper">
     <section class="header__mob-menu">
       <ul class="header__mob-list">
-        <li class="header__mob-close"><div class="close"></div></li>
+        <li class="header__mob-close"><div class="close"></div>
+          <div></div>
+        </li>
+        <li class="header__mob-item  hide">
+          <div class="header__mob-optic">
+            <a href="#">
+              <svg class="header-svg">
+                <use href="#header__mob-optic"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__menu-mob">{{>menu}}</div>
+          <div class="header__button-container hide">
+            <button class="header__button--item">Личная студия студента</button>
+            <button class="header__button--item">Личная студия преподавателя</button>
+          </div></li>
         <li class="header__mob-item"><a class="text__card">Основные сведения</a></li>
         <li class="header__mob-item"><a class="text__card">Об ИНО «Профессионал»</a></li>
         <li class="header__mob-item"><a class="text__card">Структура и органы управления</a></li>

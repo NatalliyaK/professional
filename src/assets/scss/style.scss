@@ -83,6 +83,13 @@ svg {
     gap: 8rem
   }
 
+  &__content-title {
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem
+  }
+
   &__container-item {
     background: $colorBg;
     width: 100%;
@@ -268,6 +275,14 @@ label span {
   &:hover {
     text-underline-offset: 0.7rem;
   }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .accordion {
