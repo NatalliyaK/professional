@@ -69,18 +69,14 @@
 
 .news-all {
   padding-bottom: 14rem;
+  @include breakpoint($sm-bp) {
+    padding-bottom: 8rem;
+  }
 
-  &__title {
-    position: relative;
-    padding: 4rem 0 8rem;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 39%;
-      right: 0.7rem;
-      width: 81%;
-      height: 0.2rem;
-      background-color: $border-color;
+  & .wrapper__content-title {
+    padding-bottom: 8rem;
+    @include breakpoint($xl-bp) {
+      padding-bottom: 2rem;
     }
   }
 
@@ -89,11 +85,17 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    @include breakpoint($xl-bp) {
+      padding-top: 1rem;
+    }
   }
 
   &__list {
     & li:first-child {
       border-top: 0.2rem solid $colorBg;
+      @include breakpoint($sm-bp) {
+        border-top: none;
+      }
     }
   }
 
@@ -102,6 +104,11 @@
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 0.2rem solid $colorBg;
+    @include breakpoint($sm-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 4rem;
+    }
     & > div {
       width: 100%;
     }
@@ -109,6 +116,9 @@
 
   &__item-text {
     max-width: 116rem;
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &__content {
@@ -116,11 +126,17 @@
     gap: 2rem;
     padding: 4rem 0 2rem;
     max-width: 112rem;
+    @include breakpoint($sm-bp) {
+      padding-top: 2rem;
+    }
   }
 
   &__button {
     padding: 0.45rem 3.5rem;
     margin-top: 6rem;
+    @include breakpoint($sm-bp) {
+      padding: 0.45rem 1.5rem;
+    }
   }
 
   &__item-bottom {
@@ -128,5 +144,12 @@
     gap: 12rem;
     justify-content: space-between;
     padding-bottom: 2rem;
+  }
+
+  &__bottom {
+    display: none;
+    @include breakpoint($sm-bp) {
+      display: block;
+    }
   }
 }

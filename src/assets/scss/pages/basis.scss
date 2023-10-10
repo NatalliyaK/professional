@@ -1,15 +1,28 @@
 @import "../vars";
+@import '../mixins';
 
 .basis {
   padding-top: 8rem;
   padding-bottom: 14rem;
   display: flex;
   gap: 4rem;
+  @include breakpoint($xl-bp) {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+  }
+  &__aside {
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
 
   &__information {
     display: flex;
     flex-direction: column;
     gap: 14rem;
+    @include breakpoint($xl-bp) {
+      gap: 8rem;
+    }
   }
 
   &__information td {
@@ -27,6 +40,13 @@
     display: flex;
     flex-direction: column;
     gap: 6rem;
+    @include breakpoint($xl-bp) {
+      width: 50%;
+    }
+    @include breakpoint($sm-bp) {
+      width: 25%;
+      gap: 2rem;
+    }
   }
 
   &__prof-content,
@@ -34,6 +54,9 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    @include breakpoint($sm-bp) {
+      gap: 2rem;
+    }
 
     & ul {
       padding-left: 3rem;
@@ -84,6 +107,29 @@
 
   &__document .text {
     display: inline;
+  }
+
+  &__education .text,
+  &__task,
+  &__standard,
+  &__provision-content h2,
+  &__provision-content .text,
+  &__provision-content .text-bottom2,
+  &__provision-item,
+  &__provision-content .accordion .text__additionally,
+  &__paid,
+  &__reception,
+  &__requisites,
+  &__security,
+  &__contract,
+  &__services,
+  &__protection {
+    @include breakpoint($xl-bp) {
+      width: 50%;
+    }
+    @include breakpoint($sm-bp) {
+      width: 25%;
+    }
   }
 
   &__document,
@@ -199,6 +245,9 @@
     display: flex;
     flex-direction: column;
     gap: 14rem;
+    @include breakpoint($xl-bp) {
+      gap: 8rem;
+    }
   }
 
   &__schedule table tbody tr td.text-center {
@@ -252,7 +301,11 @@
 
 table tr td:first-child {
   width: 34%;
+  @include breakpoint($xl-bp) {
+    width: 16%;
+  }
 }
+
 
 #title {
   white-space: nowrap;

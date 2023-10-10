@@ -1,3 +1,7 @@
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 window.addEventListener('DOMContentLoaded',() => {
   const header = document.querySelector('.header');
   const formAbout = document.querySelector('.form');
@@ -114,7 +118,7 @@ window.addEventListener('DOMContentLoaded',() => {
       })
     }
 
-    function showTabContent (i= 0) {
+    function showTabContent (i= 20) {
       tabContent[i].style.display = 'block';
       tabs[i].classList.add('active1');
     }

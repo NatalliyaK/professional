@@ -15,6 +15,12 @@ html {
   }
 }
 
+body {
+  @include breakpoint($xl-bp) {
+    overflow-x: hidden;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -80,7 +86,10 @@ svg {
     padding-top: 4rem;
     display: flex;
     align-items: center;
-    gap: 8rem
+    gap: 8rem;
+    @include breakpoint($sm-bp) {
+      gap: 2rem;
+    }
   }
 
   &__content-title {
@@ -216,7 +225,7 @@ svg {
 
   &-link {
     text-decoration: underline;
-    color: $mainColor;
+    color: $border-color;
     cursor: pointer;
   }
 }
