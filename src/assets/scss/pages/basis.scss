@@ -1,6 +1,7 @@
 @import "../vars";
 @import '../mixins';
 
+
 .basis {
   padding-top: 8rem;
   padding-bottom: 14rem;
@@ -20,8 +21,29 @@
     display: flex;
     flex-direction: column;
     gap: 14rem;
+    width: 100%;
     @include breakpoint($xl-bp) {
       gap: 8rem;
+    }
+  }
+
+  &__information table,
+  &__management table { //
+    width: 100%;
+    @include breakpoint($sm-bp) {
+      padding: 0;
+      border: none;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__information tr,
+  &__information td,
+  &__management tr, //
+  &__management td { //
+    @include breakpoint($sm-bp) {
+      display: block;
     }
   }
 
@@ -50,7 +72,8 @@
   }
 
   &__prof-content,
-  &__provision-content {
+  &__provision-content,
+  &__role {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -78,11 +101,13 @@
   &__structure {
     & table tr td {
       padding: 5.9rem;
+      @include breakpoint($sm-bp) {
+        padding: 1.9rem;
+      }
     }
   }
 
   &__structure-table,
-  &__education-table,
   &__provision-table {
     overflow: hidden;
     width: 100%;
@@ -109,6 +134,8 @@
     display: inline;
   }
 
+  &__management,
+  &__information,
   &__education .text,
   &__task,
   &__standard,
@@ -123,7 +150,9 @@
   &__security,
   &__contract,
   &__services,
-  &__protection {
+  &__protection,
+  &__example,
+  &__role {
     @include breakpoint($xl-bp) {
       width: 50%;
     }
@@ -210,8 +239,11 @@
 
   &__management {
    & table td {
-      padding: 4rem 2rem;
+     padding: 4rem 2rem;
      text-align: left;
+     @include breakpoint($sm-bp) {
+       padding: 2rem 1rem;
+     }
     }
   }
 
@@ -252,6 +284,12 @@
 
   &__schedule table tbody tr td.text-center {
     text-align: center;
+  }
+
+  &__role-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   &__partners {
@@ -304,6 +342,9 @@ table tr td:first-child {
   @include breakpoint($xl-bp) {
     width: 16%;
   }
+  @include breakpoint($sm-bp) {
+    width: 100%;
+  }
 }
 
 
@@ -319,12 +360,21 @@ table tr td:first-child {
   display: flex;
   flex-direction: column;
   gap: 14rem;
+  @include breakpoint($xl-bp) {
+    gap: 8rem;
+  }
   &-wrapper__swiper {
     position: relative;
     width: 124rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include breakpoint($xl-bp) {
+      width: 60rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 33rem;
+    }
   }
 
   &__swiper,
@@ -333,12 +383,23 @@ table tr td:first-child {
     overflow: hidden;
     width: 110rem;
     height: 66rem;
+    @include breakpoint($xl-bp) {
+      width: 44rem;
+      height: 43rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 34rem;
+      height: 34rem;
+    }
   }
 
   &__swiper-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include breakpoint($sm-bp) {
+      width: 25%;
+    }
   }
 
   &__swiper-button-prev,
@@ -350,6 +411,9 @@ table tr td:first-child {
     border-radius: 50%;
     background: $mainColor;
     cursor: pointer;
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
     &:hover {
       color: $red;
     }
@@ -358,18 +422,34 @@ table tr td:first-child {
   &__inventory {
     display: flex;
     gap: 9rem;
-    max-height: 37rem;
+    height: 37rem;
     position: relative;
     right: 32%;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      right: 0;
+      gap: 2rem;
+    }
   }
 
   &__inventory-card {
     display: flex;
+    height: 37rem;
+    @include breakpoint($sm-bp) {
+      height: 18rem;
+    }
   }
 
   &__inventory-item {
     background: $mainColor;
     padding: 4rem;
+    @include breakpoint($xl-bp) {
+      width: 36rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 22rem;
+      padding: 1.5rem;
+    }
   }
 
   &__number {
@@ -378,18 +458,69 @@ table tr td:first-child {
     line-height: 13rem;
     color: $colorText;
     text-align: right;
+    @include breakpoint($xl-bp) {
+      padding-top: 2rem;
+    }
+    @include breakpoint($sm-bp) {
+      font-size: 13rem;
+      line-height: 5rem;
+    }
   }
 
   & img {
     height: 100%;
+    display: block;
+    width: 100%;
+  }
+
+  &__img-container {
+    width: 35rem;
+    @include breakpoint($xl-bp) {
+      width: 24.7rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 12rem;
+    }
   }
 
   &__banner {
     display: flex;
-    max-height: 83.7rem;
-    max-width: 172rem;
+    height: 83.7rem;
+    width: 172rem;
     position: relative;
     right: 32%;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      right: 0;
+      margin-top: 18rem;
+    }
+    @include breakpoint($sm-bp) {
+      margin-top: 0;
+    }
+  }
+
+  &__banner-img {
+    @include breakpoint($xl-bp) {
+      width: 60rem;
+      height: 50rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 34rem;
+      height: 41rem;
+    }
+  }
+
+  &__img {
+    width: 44.3rem;
+    height: 33.7rem;
+    @include breakpoint($xl-bp) {
+      width: 18rem;
+      height: 25rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 12rem;
+      height: 15rem;
+    }
   }
 
   &__information {
@@ -397,8 +528,23 @@ table tr td:first-child {
     padding: 8rem 18.2rem 0 8rem;
     width: 100rem;
     position: relative;
+    @include breakpoint($xl-bp) {
+      width: 60rem;
+      padding: 2rem;
+      height: 36rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 34rem;
+      height: 36rem;
+    }
     & .title {
       width: 80.3rem;
+      @include breakpoint($xl-bp) {
+        width: 54rem;
+      }
+      @include breakpoint($sm-bp) {
+        width: 30rem;
+      }
     }
   }
 
@@ -406,6 +552,13 @@ table tr td:first-child {
     position: absolute;
     left: 52%;
     opacity: 0.3;
+    width: 32rem;
+    @include breakpoint($xl-bp) {
+      left: 3%;
+    }
+    @include breakpoint($sm-bp) {
+      left: 5%;
+    }
   }
 
 }

@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded',() => {
       })
     }
 
-    function showTabContent (i= 20) {
+    function showTabContent (i= 0) {
       tabContent[i].style.display = 'block';
       tabs[i].classList.add('active1');
     }
