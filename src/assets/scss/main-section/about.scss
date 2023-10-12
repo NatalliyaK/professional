@@ -242,6 +242,13 @@
     border-radius: 50%;
   }
 
+  &-scrollbar {
+    display: none;
+    @include breakpoint($sm-bp) {
+      display: block;
+    }
+  }
+
   &-btn-prev,
   &-btn-next {
     position: absolute;
@@ -273,6 +280,14 @@
 .swiper-button-prev:after {
   color: $colorText;
   font-size: 1rem;
+}
+
+.swiper-scrollbar-drag {
+  background: $mainColor;
+}
+
+.swiper-horizontal  > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: 0;
 }
 
 .btn-left {

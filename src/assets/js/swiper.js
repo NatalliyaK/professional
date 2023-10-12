@@ -7,7 +7,8 @@ const curseSlider = new Swiper('.curse__swiper', {
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
+            spaceBetween: 20,
         },
         // when window width is >= 480px
         600: {
@@ -76,6 +77,11 @@ const aboutUsSlider = new Swiper('.about-us__swiper', {
         nextEl: '.about-us-btn-prev',
         prevEl: '.about-us-btn-next',
     },
+
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
 })
 
 function initSwiper(containerSelector) {
@@ -94,6 +100,10 @@ function initSwiper(containerSelector) {
             nextEl: `${containerSelector}-button-prev`,
 
             prevEl: `${containerSelector}-button-next`,
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
         },
     });
 

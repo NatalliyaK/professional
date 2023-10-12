@@ -151,11 +151,12 @@
 .project-detail {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 2rem;
   margin-top: 8rem;
   @include breakpoint($xl-bp) {
     margin-top: 4rem;
     margin-bottom: 8rem;
+    gap: 6rem;
   }
 
   &__container {
@@ -171,8 +172,11 @@
   }
 
   &__img {
-    max-width: 99.5rem;
+    width: 99.5rem;
     max-height: 46rem;
+    @include breakpoint($xl-bp) {
+      width: auto;
+    }
 
     & img {
       width: 100%;

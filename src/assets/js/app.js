@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded',() => {
       })
     }
 
-    function showTabContent (i= 0) {
+    function showTabContent (i= 8) {
       tabContent[i].style.display = 'block';
       tabs[i].classList.add('active1');
     }
@@ -128,7 +128,6 @@ window.addEventListener('DOMContentLoaded',() => {
 
     tabsParent.addEventListener('click', (event) => {
      const target = event.target;
-     console.log(target)
 
       if(target && target.classList.contains('nav-bar__item')) {
         tabs.forEach((elem,i) => {
@@ -150,16 +149,24 @@ window.addEventListener('DOMContentLoaded',() => {
     });
   }
 
-  // if(accordion) {
-  //   let acc = document.querySelectorAll('.button__accordion');
-  //   let panel = document.querySelectorAll('.basis__panel');
-  //
-  //   acc.forEach(elem => {
-  //     elem.addEventListener('click', () => {
-  //
-  //     })
-  //   })
-  // }
+  if(accordion) {
+    let accParent = document.querySelector('.accordion__container');
+
+    accParent.addEventListener('click', (event) => {
+      const target = event.target;
+      console.log(target)
+      if(target && target.classList.contains('button__accordion')) {
+        const list = target.nextElementSibling;
+        if (list.style.display === 'block') {
+          list.style.display = 'none';
+          target.classList.remove('rotate');
+        } else {
+          list.style.display = 'block';
+          target.classList.add('rotate');
+        }
+      }
+    })
+  }
 })
 
 

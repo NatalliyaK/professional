@@ -37,6 +37,10 @@
       font-size: 1.8rem;
       left: 0;
     }
+
+    &.rotate:before {
+      transform: rotate(90deg);
+    }
   }
 }
 
