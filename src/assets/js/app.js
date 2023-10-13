@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded',() => {
       })
     }
 
-    function showTabContent (i= 8) {
+    function showTabContent (i= 0) {
       tabContent[i].style.display = 'block';
       tabs[i].classList.add('active1');
     }
@@ -154,7 +154,6 @@ window.addEventListener('DOMContentLoaded',() => {
 
     accParent.addEventListener('click', (event) => {
       const target = event.target;
-      console.log(target)
       if(target && target.classList.contains('button__accordion')) {
         const list = target.nextElementSibling;
         if (list.style.display === 'block') {

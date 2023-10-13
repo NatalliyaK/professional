@@ -152,4 +152,43 @@
       display: block;
     }
   }
+
+  &__img-one {
+    max-width: 102.4rem;
+    max-height: 76.8rem;
+    margin: 6rem auto;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__img-three {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 6rem;
+    & img {
+      flex-shrink: 1;
+      width: 100%;
+      height: auto;
+      max-width: 56rem;
+    }
+  }
+
+  &__img-four img {
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    max-width: 41rem;
+  }
+
+  &__list-container {
+    list-style-type: disc;
+    margin-left: 2rem;
+    & li::marker {
+      font-size: 1.5rem;
+    }
+  }
+
 }

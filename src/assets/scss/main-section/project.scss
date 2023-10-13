@@ -18,6 +18,9 @@
       & li {
         display: flex;
         gap: 1rem;
+        @include breakpoint($xl-bp) {
+          display: block;
+        }
       }
   }
 
@@ -226,7 +229,10 @@
 
   &__text-card {
     font-size: 1.5rem;
-    align-self: center
+    align-self: center;
+    @include breakpoint($xl-bp) {
+      text-align: left;
+    }
   }
 
   &__inf {
@@ -239,4 +245,43 @@
       padding-right: 1rem;
     }
   }
+}
+
+.project-result {
+  padding-bottom: 14rem;
+  @include breakpoint($xl-bp) {
+    padding-bottom: 8rem;
+  }
+
+  & .wrapper__content-title {
+    padding-bottom: 8rem;
+  }
+
+  &__content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  &__content {
+    display: flex;
+    gap: 6.4rem;
+    @include breakpoint($xl-bp) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+    }
+  }
+
+  &__img {
+    max-width: 85rem;
+
+    & img {
+      width: 100%;
+    }
+  }
+
 }
