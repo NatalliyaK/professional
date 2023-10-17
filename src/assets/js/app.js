@@ -8,7 +8,9 @@ window.addEventListener('DOMContentLoaded',() => {
   const formReg = document.querySelector('.curse-item__form');
   const aside = document.querySelector('.aside');
   const partners = document.querySelector('.basis__partners');
-  const accordion =document.querySelector('.accordion');
+  const accordion = document.querySelector('.accordion');
+  const protectionList = document.querySelector('.accordion__protection');
+  const services = document.querySelector('.basis__services-content');
 
   function handleForm (formAbout) {
     formAbout.addEventListener('submit', function (event) {
@@ -166,6 +168,37 @@ window.addEventListener('DOMContentLoaded',() => {
       }
     })
   }
+
+  if(protectionList) {
+    let accordionButton = document.querySelector('.protection__accordion');
+    let accordionPanel = document.querySelector('.protection__panel');
+
+    accordionButton.addEventListener('click', function() {
+      if( accordionPanel.style.display ===  'block') {
+        accordionPanel.style.display = 'none';
+        accordionButton.classList.remove('rotate');
+      } else {
+        accordionPanel.style.display = 'block';
+        accordionButton.classList.add('rotate');
+      }
+    });
+  }
+
+  if(services) {
+    const servicesList = document.querySelector('.services__accordion');
+    let accordionPanel = document.querySelector('.protection__panel');
+
+    servicesList.addEventListener('click', () => {
+      if( accordionPanel.style.display ===  'block') {
+        accordionPanel.style.display = 'none';
+        servicesList.classList.remove('rotate');
+      } else {
+        accordionPanel.style.display = 'block';
+        servicesList.classList.add('rotate');
+      }
+    })
+  }
+
 })
 
 

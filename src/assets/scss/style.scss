@@ -41,9 +41,9 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-bottom: 0.1rem solid $colorText;
-  -webkit-text-fill-color: $colorText;
-  -webkit-box-shadow: 0 0 0 1000px $mainColor inset;
+  border-bottom: 0.1rem solid $border-color;
+  -webkit-text-fill-color: $black;
+  -webkit-box-shadow: 0 0 0 1000px $colorText inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -179,6 +179,16 @@ svg {
     font-size: 2rem;
     line-height: 2.9rem;
   }
+
+  &__title-partner {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 3.8rem;
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: normal;
+    }
+  }
 }
 
 :active, :hover, :focus {
@@ -224,7 +234,6 @@ svg {
   border: 0.1rem solid $border-color;
 
   &-link {
-    text-decoration: underline;
     color: $border-color;
     cursor: pointer;
   }

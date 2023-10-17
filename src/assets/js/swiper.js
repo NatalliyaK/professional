@@ -94,7 +94,7 @@ function initSwiper(containerSelector) {
             pagination: {
             el: '.swiper-pagination',
                 clickable: true
-        },
+            },
 
         navigation: {
             nextEl: `${containerSelector}-button-prev`,
