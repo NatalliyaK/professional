@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded',() => {
   const accordion = document.querySelector('.accordion');
   const protectionList = document.querySelector('.accordion__protection');
   const services = document.querySelector('.basis__services-content');
-
+  const contacts = document.querySelector('.contacts');
   function handleForm (formAbout) {
     formAbout.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -197,6 +197,30 @@ window.addEventListener('DOMContentLoaded',() => {
         servicesList.classList.add('rotate');
       }
     })
+  }
+
+  if( contacts ) {
+    ymaps.ready(function () {
+
+      let myMap = new ymaps.Map("YMapsID", {
+        center: [55.76, 37.64],
+        zoom: 11,
+      });
+
+
+      let myPlacemark = new ymaps.Placemark([ 55.736260, 37.693758], {
+        balloonContent: 'Институт',
+      });
+      myMap.behaviors.disable('scrollZoom');
+
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        myMap.behaviors.disable('drag');
+      }
+
+      myMap.geoObjects.add(myPlacemark);
+
+    });
   }
 
 })

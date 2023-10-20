@@ -3,13 +3,13 @@
 
 .header {
   padding: 2rem 0;
-  height: 20rem;
-  top: -9rem;
+  height: 30rem;
+  top: -14rem;
   background: $colorText;
   z-index: 20;
   position: sticky;
   @include breakpoint($xl-bp) {
-    height: 16rem;
+    height: 20rem;
     padding-top: 2rem;
     padding-bottom: 0;
   }
@@ -28,9 +28,33 @@
     margin-bottom: 1rem;
     transition: all 2s ease;
     justify-content: space-between;
+    flex-wrap: wrap;
     @include breakpoint($sm-bp) {
-      justify-content: flex-end
+      justify-content: flex-end;
     }
+  }
+
+  &__linc {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid $border-color;
+    white-space: nowrap;
+    & p:last-child {
+      text-align: end;
+    }
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
+
+  &__mob-linc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-top: solid 0.2rem rgba(255, 255, 255, 0.25);
   }
 
   & .button {
@@ -83,7 +107,8 @@
     }
   }
 
-  &__text {
+  &__text,
+  &__text-linc {
     width: 37rem;
     margin-right: 1rem;
     @include breakpoint($xl-bp) {
@@ -91,6 +116,7 @@
     }
   }
 
+  &__text-linc a,
   &__text a {
     color: $colorBg;
     text-decoration: underline;
@@ -152,7 +178,7 @@
   }
 
   &__menu .menu {
-    width: 90rem;
+    width: 120rem;
   }
 
   &__nav {
@@ -227,25 +253,6 @@
         height: 3.9rem;
       }
     }
-
-    &-text {
-      font-weight: 800;
-      font-size: 2.4rem;
-      line-height: 3.56rem;
-      text-transform: uppercase;
-      color: $mainColor;
-      &:hover {
-        color: $red;
-      }
-      @include breakpoint($xl-bp) {
-        font-size: 2rem;
-        line-height: 3rem;
-      }
-      @include breakpoint($sm-bp) {
-        font-size: 1.4rem;
-        line-height: 2rem;
-      }
-    }
   }
 
   &__tel a {
@@ -265,7 +272,7 @@
 
   &__tel,
   &__menu {
-    align-self: end;
+    align-self: center;
     @include breakpoint($sm-bp) {
       display: none;
     }
@@ -327,8 +334,11 @@
 
   &__mob-optic {
     position: absolute;
-    top: 4rem;
+    top: 8rem;
     right: 3rem;
+    @include breakpoint($xl-bp) {
+      top: 4rem;
+    }
   }
 
   &__button-container {
