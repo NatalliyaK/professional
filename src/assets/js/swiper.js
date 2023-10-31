@@ -42,7 +42,7 @@ const projectSlider = new Swiper('.project__swiper', {
     navigation: {
         nextEl: '.project-btn-prev',
         prevEl: '.project-btn-next',
-    },
+    }
 })
 
 const aboutUsSlider = new Swiper('.about-us__swiper', {
